@@ -15,9 +15,52 @@ require(__DIR__ . "/../../partials/nav.php");
 <script>
     function validate(form) {
         //TODO 1: implement JavaScript validation
-        //ensure it returns false for an error and true for success
+        let pw = form.newPassword.value;
+        let con = form.confirmPassword.value;
+        let isValid = true;
+        let userName= form.Username.value;
+        //making a regex to show what is expected using regex
+        var nameRegex = /^[a-zA-Z\-]+$/;
+        //Validate username
+        if(nameRegex.test(userName))
+        {
+            isValid = true;
+        }
+        else if(userName == "")
+        {
+            flash("Username is empty, please enter a User name.", "warning");
+            isValid = false;
+        }
+        //validate email
+        if (/^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/.test(form.email.value))
+        {
+            isValid = true;
+        }
+        else
+        {
+            flash("Invalid email.","warning");
+            isValid = false;
+        }
 
-        return true;
+
+
+
+        if (pw !== con) {
+             flash("Password and Confirm password must match", "warning");
+            isValid = false;
+        }
+        else if(pw < 8)
+        {
+            flash("Password is too short, must be at least 8 characters.", "warning");
+            isValid= false;
+        }
+        return isValid;
+        //check email or username and validate it, validate passowrd length check profile for ex
+
+        //ensure it returns false for an error and true for success
+        
+
+        
     }
 </script>
 <?php
