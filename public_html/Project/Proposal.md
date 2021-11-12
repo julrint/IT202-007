@@ -23,24 +23,24 @@
 ### Proposal Checklist and Evidence
 
 - Milestone 1
-  - [ ] (mm/dd/yyyy of completion) User will be able to register a new account
+  - [x] (11/11/2021 of completion) User will be able to register a new account
     -  List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Status: Completed (Completed, Partially working, Incomplete, Pending)
+      - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/AwkwardJ/IT202-007/pull/23 (repeat as necessary)
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-  - [ ] (mm/dd/yyyy of completion) User will be able to login to their account (given they enter the correct credentials)
+        - Screenshot: ![SuccessfullRegistration](https://user-images.githubusercontent.com/55968472/141397729-977fff7a-ec25-45c8-a460-d8e25367cd96.JPG)
+          - Successfully registered new account
+  - [x] (mm/dd/yyyy of completion) User will be able to login to their account (given they enter the correct credentials)
     -  List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Status: Completed (Completed, Partially working, Incomplete, Pending)
+      - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/AwkwardJ/IT202-007/pull/23 (repeat as necessary)
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
+        - Screenshot: ![SuccessfullLogin](https://user-images.githubusercontent.com/55968472/141399445-33f30f35-dbce-4c68-9117-dae20cce9df6.JPG) (paste the image so it uploads to github) (repeat as necessary)
+          - Successfull login attempt.
   - [ ] (mm/dd/yyyy of completion) User will be able to logout
     -  List of Evidence of Feature Completion
       - Status: Pending (Completed, Partially working, Incomplete, Pending)
