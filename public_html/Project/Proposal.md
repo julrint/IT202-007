@@ -23,87 +23,87 @@
 ### Proposal Checklist and Evidence
 
 - Milestone 1
-  - [ ] (mm/dd/yyyy of completion) User will be able to register a new account
+  - [x] (11/11/2021 of completion) User will be able to register a new account
+    -  List of Evidence of Feature Completion
+      - Status: Completed (Completed, Partially working, Incomplete, Pending)
+      - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Pull Requests
+        - https://github.com/AwkwardJ/IT202-007/pull/23 (repeat as necessary)
+      - Screenshots
+        - Screenshot: ![SuccessfullRegistration](https://user-images.githubusercontent.com/55968472/141397729-977fff7a-ec25-45c8-a460-d8e25367cd96.JPG)
+          - Successfully registered new account
+  - [x] (11/11/2021 of completion) User will be able to login to their account (given they enter the correct credentials)
+    -  List of Evidence of Feature Completion
+      - Status: Completed (Completed, Partially working, Incomplete, Pending)
+      - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Pull Requests
+        - https://github.com/AwkwardJ/IT202-007/pull/23 (repeat as necessary)
+      - Screenshots
+        - Screenshot: ![SuccessfullLogin](https://user-images.githubusercontent.com/55968472/141399445-33f30f35-dbce-4c68-9117-dae20cce9df6.JPG)
+          - Successfull login attempt.
+  - [x] (11/11/2021 of completion) User will be able to logout
+    -  List of Evidence of Feature Completion
+      - Status: Partially Working (Completed, Partially working, Incomplete, Pending)
+      - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
+      - Pull Requests
+        - https://github.com/AwkwardJ/IT202-007/pull/23 (repeat as necessary)
+      - Screenshots
+        - No screenshot available since logout message wont show (paste the image so it uploads to github) (repeat as necessary)
+          - Screenshot will be available once message is able to be shown
+  - [x] (11/11/2021 of completion) Basic security rules implemented
     -  List of Evidence of Feature Completion
       - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/AwkwardJ/IT202-007/pull/23
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-  - [ ] (mm/dd/yyyy of completion) User will be able to login to their account (given they enter the correct credentials)
+        - ![basicSecurity](https://user-images.githubusercontent.com/55968472/141411749-56098cbb-e839-4d08-a91d-819de412709c.JPG)
+          - Shows that it is checking to see if someone is logged in by showing logged in person's info and table shown as well
+  - [x] (11/11/2021 of completion) Basic Roles implemented
     -  List of Evidence of Feature Completion
       - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/AwkwardJ/IT202-007/pull/23
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-  - [ ] (mm/dd/yyyy of completion) User will be able to logout
-    -  List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
-      - Pull Requests
-        - PR link #1 (repeat as necessary)
-      - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-  - [ ] (mm/dd/yyyy of completion) Basic security rules implemented
-    -  List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
-      - Pull Requests
-        - PR link #1 (repeat as necessary)
-      - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-  - [ ] (mm/dd/yyyy of completion) Basic Roles implemented
-    -  List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
-      - Pull Requests
-        - PR link #1 (repeat as necessary)
-      - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
+        - ![Tables](https://user-images.githubusercontent.com/55968472/141411197-29924848-4b43-4c13-ae62-f7781d2abda3.JPG)
+          - Tables have been created, need to fix up people not showing up even though they are in users.
   - [ ] (mm/dd/yyyy of completion) Site should have basic styles/theme applied; everything should be styled
     -  List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Status: Incomplete (Completed, Partially working, Incomplete, Pending)
+      - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/AwkwardJ/IT202-007/pull/23
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
+        - ![LoginScreen](https://user-images.githubusercontent.com/55968472/141407322-b61a2d12-a0aa-4a49-b596-f29e40ba6c86.JPG)
+          - Current theme, much work to be one on text
   - [ ] (mm/dd/yyyy of completion) Any output messages/errors should be “user friendly”
     -  List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Status: Partially working (Completed, Partially working, Incomplete, Pending)
+      - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/AwkwardJ/IT202-007/pull/23
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
+        - ![LoginInfo](https://user-images.githubusercontent.com/55968472/141409929-412f7dfc-09a0-4006-9ded-1ea2f5000137.JPG)
+          - Output message does come up, but when entering the wrong password, it doesnt appear until login is successful second try
   - [ ] (mm/dd/yyyy of completion) User will be able to see their profile
     -  List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
+      - Status: Partially working (Completed, Partially working, Incomplete, Pending)
       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/AwkwardJ/IT202-007/pull/23
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
+        - ![LoginInfo](https://user-images.githubusercontent.com/55968472/141409955-d9329265-81bb-4b3c-aa80-6bd9050e5270.JPG)
+          - User information is shown when logged in but not in the correct format
   - [ ] (mm/dd/yyyy of completion) User will be able to edit their profile
     -  List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
+      - Status: Incomplete (Completed, Partially working, Incomplete, Pending)
       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/AwkwardJ/IT202-007/pull/23
       - Screenshots
         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
+          - No screenshot yet, I have not given the option the edit their profile yet. 
 
 - Milestone 2
 - Milestone 3
