@@ -151,6 +151,10 @@
           - No screenshot yet, I have not given the option the edit their profile yet. 
           - Screenshot #1 description explaining what you're trying to show
 - Milestone 2
+- [x] (12/03/2021 of completion) Pick a simple game to implement, anything that generates a score that’s more advanced than a simple random number generator (may build off of a sample from the site shared in class)
+  -  List of Evidence of Feature Completion
+    - Status: Complete (Completed, Partially working, Incomplete, Pending)
+=======
 - [ ] (mm/dd/yyyy of completion) Pick a simple game to implement, anything that generates a score that’s more advanced than a simple random number generator (may build off of a sample from the site shared in class)
   -  List of Evidence of Feature Completion
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
