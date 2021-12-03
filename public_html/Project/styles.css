@@ -14,10 +14,12 @@
     background-color: teal;
 }
 nav li{display: inline; background-color: rgb(238, 198, 161);}
+
 nav li a{color: rgb(0, 0, 0)}
-input{border-radius: 200%;}
+input{border-radius: 4px;}
 body{
     background-color: rgb(238, 198, 161);
     color: rgb(0, 0, 0);
+    
 
 }
