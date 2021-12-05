@@ -40,7 +40,7 @@
   - [x] (11/11/2021 of completion) User will be able to login to their account (given they enter the correct credentials)
         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
           - Screenshot #1 description explaining what you're trying to show
-  - [ ] (mm/dd/yyyy of completion) User will be able to login to their account (given they enter the correct credentials)
+  - [x] (11/11/2021 of completion) User will be able to login to their account (given they enter the correct credentials)
     -  List of Evidence of Feature Completion
       - Status: Completed (Completed, Partially working, Incomplete, Pending)
       - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
@@ -50,23 +50,22 @@
         - https://github.com/AwkwardJ/IT202-007/pull/23 (repeat as necessary)
         - PR link #1 (repeat as necessary)
       - Screenshots
-        - Screenshot: ![SuccessfullLogin](https://user-images.githubusercontent.com/55968472/141399445-33f30f35-dbce-4c68-9117-dae20cce9df6.JPG)
+        - Screenshot: ![SuccessfullLogin](![image](https://user-images.githubusercontent.com/55968472/144676850-0b4ff1ff-4651-40c1-8006-c885fa1b4b7d.png)
           - Successfull login attempt.
   - [x] (11/11/2021 of completion) User will be able to logout
         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
           - Screenshot #1 description explaining what you're trying to show
-  - [ ] (mm/dd/yyyy of completion) User will be able to logout
+  - [x] (11/11/2021 of completion) User will be able to logout
     -  List of Evidence of Feature Completion
-      - Status: Partially Working (Completed, Partially working, Incomplete, Pending)
+      - Status: Completed (Completed, Partially working, Incomplete, Pending)
       - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
+      - Status: Completed (Completed, Partially working, Incomplete, Pending)
       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
       - Pull Requests
         - https://github.com/AwkwardJ/IT202-007/pull/23 (repeat as necessary)
         - PR link #1 (repeat as necessary)
       - Screenshots
-        - No screenshot available since logout message wont show (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot will be available once message is able to be shown
+        - It just goes back to homescreen no message pops up
   - [x] (11/11/2021 of completion) Basic security rules implemented
         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
           - Screenshot #1 description explaining what you're trying to show
@@ -154,6 +153,10 @@
 - [x] (12/03/2021 of completion) Pick a simple game to implement, anything that generates a score that’s more advanced than a simple random number generator (may build off of a sample from the site shared in class)
   -  List of Evidence of Feature Completion
     - Status: Complete (Completed, Partially working, Incomplete, Pending)
+=======
+- [ ] (mm/dd/yyyy of completion) Pick a simple game to implement, anything that generates a score that’s more advanced than a simple random number generator (may build off of a sample from the site shared in class)
+  -  List of Evidence of Feature Completion
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
       - PR link #1 (repeat as necessary)
