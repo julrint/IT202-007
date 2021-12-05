@@ -163,7 +163,7 @@
 - [x] (12/04/2021) The system will save the user’s score at the end of the game if the user is logged in
   -  Need to add scores table to save scores for the longed in player.
     - Status: Partially working (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
     - Pull Requests
       - PR link https://github.com/AwkwardJ/IT202-007/pull/31
     - Screenshots
