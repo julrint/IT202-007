@@ -40,7 +40,7 @@
   - [x] (11/11/2021 of completion) User will be able to login to their account (given they enter the correct credentials)
         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
           - Screenshot #1 description explaining what you're trying to show
-  - [x] (11/11/2021 of completion) User will be able to login to their account (given they enter the correct credentials)
+  - [ ] (mm/dd/yyyy of completion) User will be able to login to their account (given they enter the correct credentials)
     -  List of Evidence of Feature Completion
       - Status: Completed (Completed, Partially working, Incomplete, Pending)
       - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
@@ -50,22 +50,23 @@
         - https://github.com/AwkwardJ/IT202-007/pull/23 (repeat as necessary)
         - PR link #1 (repeat as necessary)
       - Screenshots
-        - Screenshot: ![SuccessfullLogin](![image](https://user-images.githubusercontent.com/55968472/144676850-0b4ff1ff-4651-40c1-8006-c885fa1b4b7d.png)
+        - Screenshot: ![SuccessfullLogin](https://user-images.githubusercontent.com/55968472/141399445-33f30f35-dbce-4c68-9117-dae20cce9df6.JPG)
           - Successfull login attempt.
   - [x] (11/11/2021 of completion) User will be able to logout
         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
           - Screenshot #1 description explaining what you're trying to show
-  - [x] (11/11/2021 of completion) User will be able to logout
+  - [ ] (mm/dd/yyyy of completion) User will be able to logout
     -  List of Evidence of Feature Completion
-      - Status: Completed (Completed, Partially working, Incomplete, Pending)
+      - Status: Partially Working (Completed, Partially working, Incomplete, Pending)
       - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
-      - Status: Completed (Completed, Partially working, Incomplete, Pending)
+      - Status: Pending (Completed, Partially working, Incomplete, Pending)
       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
       - Pull Requests
         - https://github.com/AwkwardJ/IT202-007/pull/23 (repeat as necessary)
         - PR link #1 (repeat as necessary)
       - Screenshots
-        - It just goes back to homescreen no message pops up
+        - No screenshot available since logout message wont show (paste the image so it uploads to github) (repeat as necessary)
+          - Screenshot will be available once message is able to be shown
   - [x] (11/11/2021 of completion) Basic security rules implemented
         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
           - Screenshot #1 description explaining what you're trying to show
@@ -150,31 +151,27 @@
           - No screenshot yet, I have not given the option the edit their profile yet. 
           - Screenshot #1 description explaining what you're trying to show
 - Milestone 2
-- [x] (12/03/2021 of completion) Pick a simple game to implement, anything that generates a score that’s more advanced than a simple random number generator (may build off of a sample from the site shared in class)
-  -  List of Evidence of Feature Completion
+- [x] (12/04/2021) Pick a simple game to implement, anything that generates a score that’s more advanced than a simple random number generator (may build off of a sample from the site shared in class)
+  -  Game chosen: Click test speed, the player will click as fast as they can to score the highest click per second they can get. 
     - Status: Complete (Completed, Partially working, Incomplete, Pending)
-=======
-- [ ] (mm/dd/yyyy of completion) Pick a simple game to implement, anything that generates a score that’s more advanced than a simple random number generator (may build off of a sample from the site shared in class)
-  -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link https://github.com/AwkwardJ/IT202-007/pull/31
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-- [ ] (mm/dd/yyyy of completion) The system will save the user’s score at the end of the game if the user is logged in
-  -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+      - ![image](https://user-images.githubusercontent.com/55968472/144732469-71ec6c4e-a4d7-45c0-943c-d066cf7ce66f.png)
+        - Screenshot of game chosen
+- [x] (12/04/2021) The system will save the user’s score at the end of the game if the user is logged in
+  -  Need to add scores table to save scores for the longed in player.
+    - Status: Partially working (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link https://github.com/AwkwardJ/IT202-007/pull/31
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+      - ![image](https://user-images.githubusercontent.com/55968472/144732661-aa50ae76-6026-4dce-8504-15e100567d12.png)
+        - Shows the score after the player has played
 - [ ] (mm/dd/yyyy of completion) The user will be able to see their last 10 scores
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Status: Incomplete (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
       - PR link #1 (repeat as necessary)
@@ -183,32 +180,13 @@
         - Screenshot #1 description explaining what you're trying to show
 - [ ] (mm/dd/yyyy of completion) Create functions that output the following scoreboards (this will be used later)
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Status: Incomplete (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
       - PR link #1 (repeat as necessary)
     - Screenshots
       - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
         - Screenshot #1 description explaining what you're trying to show
-
-- [ ] dd/mm/yyyyPick a simple game to implement, anything that generates a score that’s more advanced than a simple random number generator (may build off of a sample from the site shared in class)
-- What game will you be doing?
-- [game]
-- Briefly describe it.
-- [describe]
-Note: For this milestone the game doesn’t need to be complete, just have something basic or a placeholder that can generate a score when played.
-- [ ] dd/mm/yyyyThe system will save the user’s score at the end of the game if the user is logged in
-  - [ ] There should be a scores table (id, user_id, score, created)
-  - [ ] Each received score is a new entry (scores will not be updated)
-- [ ] dd/mm/yyyyThe user will be able to see their last 10 scores
-- Show on their profile page
-- Ordered by most recent
-- [ ] dd/mm/yyyy Create functions that output the following scoreboards (this will be used later)
--[ ] Top 10 Weekly
-- [ ] Top 10 Monthly
-- [ ] Top 10 Lifetime
-- [ ] Scoreboards should show no more than 10 results; if there are no results a proper message should be displayed (i.e., “No [time period] scores to display”)
-
 
 - Milestone 3
   - [ ] (mm/dd/yyyy of completion) Users will have points associated with their account.
