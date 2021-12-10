@@ -164,6 +164,8 @@
   -  Need to add scores table to save scores for the longed in player.
     - Status: Partially working (Completed, Partially working, Incomplete, Pending)
     - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
+=======
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
       - PR link https://github.com/AwkwardJ/IT202-007/pull/31
     - Screenshots
