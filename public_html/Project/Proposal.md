@@ -272,6 +272,97 @@
         - Screenshot #1 description explaining what you're trying to show
 
 - Milestone 4
+ - [ ] (mm/dd/yyyy of completion) User can set their profile to be public or private (will need another column in Users table)
+  -  If public, hide email address from other users
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+        - Screenshot #1 description explaining what you're trying to show
+- [ ] (mm/dd/yyyy of completion) User will be able to see their competition history
+  -  Limit to 10 results
+  -  Paginate anything after 10
+  -  If no results, show the appropriate message
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+        - Screenshot #1 description explaining what you're trying to show
+- [ ] (mm/dd/yyyy of completion) User with the role of “admin” can edit a competition where paid_out = false
+  -  They can adjust any of the regular form values
+  -  If the competition was expired they can update the duration to include extra time
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+        - Screenshot #1 description explaining what you're trying to show
+ - [ ] (mm/dd/yyyy of completion) Add pagination to the Active Competitions view
+  -  Show 10 competitions per page
+  -  Paginate anything after 10
+  -  If no results, show the appropriate message
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+        - Screenshot #1 description explaining what you're trying to show
+- [ ] (mm/dd/yyyy of completion) Anywhere a username is displayed should be a link to that user’s profile
+  -  This includes all scoreboards
+  -  If the profile is private you can have the page just display “this profile is private” upon access
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+        - Screenshot #1 description explaining what you're trying to show
+- [ ] (mm/dd/yyyy of completion) Viewing an active or expired competition should show the top 10 scoreboard related to that competition
+  -  List of Evidence of Feature Completion
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+        - Screenshot #1 description explaining what you're trying to show
+ - [ ] (mm/dd/yyyy of completion) Game should be fully implemented/complete by this point
+  -  Game should tell the player if they’re not logged in that their score will not be recorded.
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+        - Screenshot #1 description explaining what you're trying to show
+- [ ] (mm/dd/yyyy of completion) User’s score history will include pagination
+  -  Show latest 10
+  -  Paginate after 10
+  -  Show appropriate message for no results
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+        - Screenshot #1 description explaining what you're trying to show
+- [ ] (mm/dd/yyyy of completion) Home page will have a weekly, monthly, and lifetime scoreboard
+  -  Will also have a link to the game
+  -  Scoreboards will show username and points for the session
+      -  (See requirement about username linking to profile)
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+        - Screenshot #1 description explaining what you're trying to show
 ### Intructions
 #### Don't delete this
 1. Pick one project type
