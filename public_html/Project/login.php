@@ -45,9 +45,6 @@ require(__DIR__ . "/../../partials/nav.php");
             isValid = false;
         }
 
-
-
-
         if (pw !== con) {
              flash("Password and Confirm password must match", "warning");
             isValid = false;
