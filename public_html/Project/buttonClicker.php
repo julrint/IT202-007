@@ -154,6 +154,19 @@
       scoreTxt.textContent = score;
     }
   });
+  let http = new XMLHttpRequest();
+                http.onreadystatechange = () => {
+                    if (http.readyState == 4) {
+                        if (http.status === 200) {
+                            let data = JSON.parse(http.responseText);
+                            console.log("received data", data);
+                            console.log("Saved score");
+                        }
+                        window.location.reload(); //lazily reloading the page to get a new nonce for next game
+                    }
+                }
+                http.open("POST", "api/save_score.php", true);
+                http.send(`score=${score}`);
 </script>
 </body>
 </html>

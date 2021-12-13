@@ -40,7 +40,7 @@
   - [x] (11/11/2021 of completion) User will be able to login to their account (given they enter the correct credentials)
         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
           - Screenshot #1 description explaining what you're trying to show
-  - [x] (11/11/2021 of completion) User will be able to login to their account (given they enter the correct credentials)
+  - [ ] (mm/dd/yyyy of completion) User will be able to login to their account (given they enter the correct credentials)
     -  List of Evidence of Feature Completion
       - Status: Completed (Completed, Partially working, Incomplete, Pending)
       - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
@@ -50,22 +50,23 @@
         - https://github.com/AwkwardJ/IT202-007/pull/23 (repeat as necessary)
         - PR link #1 (repeat as necessary)
       - Screenshots
-        - Screenshot: ![SuccessfullLogin](![image](https://user-images.githubusercontent.com/55968472/144676850-0b4ff1ff-4651-40c1-8006-c885fa1b4b7d.png)
+        - Screenshot: ![SuccessfullLogin](https://user-images.githubusercontent.com/55968472/141399445-33f30f35-dbce-4c68-9117-dae20cce9df6.JPG)
           - Successfull login attempt.
   - [x] (11/11/2021 of completion) User will be able to logout
         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
           - Screenshot #1 description explaining what you're trying to show
-  - [x] (11/11/2021 of completion) User will be able to logout
+  - [ ] (mm/dd/yyyy of completion) User will be able to logout
     -  List of Evidence of Feature Completion
-      - Status: Completed (Completed, Partially working, Incomplete, Pending)
+      - Status: Partially Working (Completed, Partially working, Incomplete, Pending)
       - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
-      - Status: Completed (Completed, Partially working, Incomplete, Pending)
+      - Status: Pending (Completed, Partially working, Incomplete, Pending)
       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
       - Pull Requests
         - https://github.com/AwkwardJ/IT202-007/pull/23 (repeat as necessary)
         - PR link #1 (repeat as necessary)
       - Screenshots
-        - It just goes back to homescreen no message pops up
+        - No screenshot available since logout message wont show (paste the image so it uploads to github) (repeat as necessary)
+          - Screenshot will be available once message is able to be shown
   - [x] (11/11/2021 of completion) Basic security rules implemented
         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
           - Screenshot #1 description explaining what you're trying to show
@@ -155,16 +156,18 @@
     - Status: Complete (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link https://github.com/AwkwardJ/IT202-007/pull/31
     - Screenshots
       - ![image](https://user-images.githubusercontent.com/55968472/144732469-71ec6c4e-a4d7-45c0-943c-d066cf7ce66f.png)
         - Screenshot of game chosen
 - [x] (12/04/2021) The system will save the user’s score at the end of the game if the user is logged in
   -  Need to add scores table to save scores for the longed in player.
     - Status: Partially working (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
+=======
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link https://github.com/AwkwardJ/IT202-007/pull/31
     - Screenshots
       - ![image](https://user-images.githubusercontent.com/55968472/144732661-aa50ae76-6026-4dce-8504-15e100567d12.png)
         - Shows the score after the player has played
@@ -182,77 +185,73 @@
     - Status: Incomplete (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+     - PR link #1 (repeat as necessary)
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+     - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+      - Screenshot #1 description explaining what you're trying to show
 
 - Milestone 3
-  - [ ] (mm/dd/yyyy of completion) Users will have points associated with their account.
-  -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+  - [x] (12/12/2021) Users will have points associated with their account.
+  -  Points show up on profile page on top right
+    - Status: Complete (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-      - PR link #1 (repeat as necessary)
-    - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-- [ ] (mm/dd/yyyy of completion) Create a PointsHistory table (id, user_id, point_change, reason, created)
-  -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+     - PR link #1 (repeat as necessary)
+    - ![image](https://user-images.githubusercontent.com/55968472/145741822-1b0dabe2-265c-4268-92e6-958de813daa9.png)
+     - Showing points on profile(top right)
+- [x] (12/12/2021) Create a PointsHistory table (id, user_id, point_change, reason, created)
+    - Status: Complete (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+     - PR link #1 (repeat as necessary)
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-- [ ] (mm/dd/yyyy of completion) Competitions table should have the following columns (id, name, created, duration, expires (now + duration), current_reward, starting_reward, join_fee, current_participants, min_participants, paid_out (boolean), min_score, first_place_per, second_place_per, third_place_per, cost_to_create, created, modified)
-  -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+     - ![image](https://user-images.githubusercontent.com/55968472/145742237-7b0761f3-e503-4fa3-b09c-5f4fb05596e4.png)
+        - Showing table that was made, called bills history to avoid errors in code. But this represents point history
+- [x] (12/12/2021) Competitions table should have the following columns (id, name, created, duration, expires (now + duration), current_reward, starting_reward, join_fee, current_participants, min_participants, paid_out (boolean), min_score, first_place_per, second_place_per, third_place_per, cost_to_create, created, modified)
+    - Status: Complete (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+     - PR link #1 (repeat as necessary)
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
- - [ ] (mm/dd/yyyy of completion) User will be able to create a competition
-  -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+     - ![image](https://user-images.githubusercontent.com/55968472/145742458-cb3ca1d2-c6b5-4577-a6ce-32a0cff69d42.png)
+        - Showing table of competition, with the required colums
+ - [x] (12/12/2021) User will be able to create a competition
+    - Status: Complete (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+     - PR link #1 (repeat as necessary)
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+     - ![image](https://user-images.githubusercontent.com/55968472/145742757-766e2bcc-9cc0-4335-9998-bbff2c2ce537.png)
+      - Screenshot shows that user is able to create competition
 - [ ] (mm/dd/yyyy of completion) Each new participant causes the Reward value to increase by at least 1 or 50% of the joining fee rounded up
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Status: Incomplete (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
       - PR link #1 (repeat as necessary)
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-- [ ] (mm/dd/yyyy of completion) Have a page where the User can see active competitions (not expired)
+      - ![image](https://user-images.githubusercontent.com/55968472/145744414-031385ef-f3fc-4b54-90e2-0dd756c415bf.png)
+        - Tried messing with create competition but cant get it to increment when participants go up
+- [x] (12/12/2021) Have a page where the User can see active competitions (not expired)
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Status: partially working (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
       - PR link #1 (repeat as necessary)
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
- - [ ] (mm/dd/yyyy of completion) Will need an association table CompetitionParticipants (id, comp_id, user_id, created)
+      - ![image](https://user-images.githubusercontent.com/55968472/145744545-84e64177-ad87-4dd9-be89-ecdfa2edf148.png)
+        - Shows active competitions but, since I dont have enough points, you can only see that there is none made, still works though
+ - [x] (mm/dd/yyyy of completion) Will need an association table CompetitionParticipants (id, comp_id, user_id, created)
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Status: Completed (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
       - PR link #1 (repeat as necessary)
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+      - ![image](https://user-images.githubusercontent.com/55968472/145744749-a114e266-61f2-41e7-b8e3-bedad6a14e5d.png)
+        - Table is shown as BGD_userComs but it is the competition particpants table showing the need(id, comp_id, user_id, crated)
 - [ ] (mm/dd/yyyy of completion) User can join active competitions
-  -  List of Evidence of Feature Completion
+  -  Cant do yet,once admin account is working, there will be test done to see if I can join
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
@@ -260,17 +259,109 @@
     - Screenshots
       - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
         - Screenshot #1 description explaining what you're trying to show
-- [ ] (mm/dd/yyyy of completion) Create function that calculates competition winners
-  -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+- [x] (12/12/2021) Create function that calculates competition winners
+    - get all expired and not paid_out competitions
+    - check tht particapnts count against the min required, get top 3 winners
+    - Status: complete (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
       - PR link #1 (repeat as necessary)
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+      - ![image](https://user-images.githubusercontent.com/55968472/145746501-f49ae9cd-23d7-4dd0-a619-c3b65ef5940b.png)
+        - Image of part of the function
 
 - Milestone 4
+ - [ ] (mm/dd/yyyy of completion) User can set their profile to be public or private (will need another column in Users table)
+  -  If public, hide email address from other users
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+        - Screenshot #1 description explaining what you're trying to show
+- [ ] (mm/dd/yyyy of completion) User will be able to see their competition history
+  -  Limit to 10 results
+  -  Paginate anything after 10
+  -  If no results, show the appropriate message
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+        - Screenshot #1 description explaining what you're trying to show
+- [ ] (mm/dd/yyyy of completion) User with the role of “admin” can edit a competition where paid_out = false
+  -  They can adjust any of the regular form values
+  -  If the competition was expired they can update the duration to include extra time
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+        - Screenshot #1 description explaining what you're trying to show
+ - [ ] (mm/dd/yyyy of completion) Add pagination to the Active Competitions view
+  -  Show 10 competitions per page
+  -  Paginate anything after 10
+  -  If no results, show the appropriate message
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+        - Screenshot #1 description explaining what you're trying to show
+- [ ] (mm/dd/yyyy of completion) Anywhere a username is displayed should be a link to that user’s profile
+  -  This includes all scoreboards
+  -  If the profile is private you can have the page just display “this profile is private” upon access
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+        - Screenshot #1 description explaining what you're trying to show
+- [ ] (mm/dd/yyyy of completion) Viewing an active or expired competition should show the top 10 scoreboard related to that competition
+  -  List of Evidence of Feature Completion
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+        - Screenshot #1 description explaining what you're trying to show
+ - [ ] (mm/dd/yyyy of completion) Game should be fully implemented/complete by this point
+  -  Game should tell the player if they’re not logged in that their score will not be recorded.
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+        - Screenshot #1 description explaining what you're trying to show
+- [ ] (mm/dd/yyyy of completion) User’s score history will include pagination
+  -  Show latest 10
+  -  Paginate after 10
+  -  Show appropriate message for no results
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+        - Screenshot #1 description explaining what you're trying to show
+- [ ] (mm/dd/yyyy of completion) Home page will have a weekly, monthly, and lifetime scoreboard
+  -  Will also have a link to the game
+  -  Scoreboards will show username and points for the session
+      -  (See requirement about username linking to profile)
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+        - Screenshot #1 description explaining what you're trying to show
 ### Intructions
 #### Don't delete this
 1. Pick one project type
