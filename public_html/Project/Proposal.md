@@ -172,23 +172,22 @@
       - ![image](https://user-images.githubusercontent.com/55968472/144732661-aa50ae76-6026-4dce-8504-15e100567d12.png)
         - Shows the score after the player has played
 - [ ] (mm/dd/yyyy of completion) The user will be able to see their last 10 scores
-  -  List of Evidence of Feature Completion
+  -  The score for some reason will not save to the table after playing the game
     - Status: Incomplete (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+     - https://github.com/AwkwardJ/IT202-007/pull/31
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+    -
         - Screenshot #1 description explaining what you're trying to show
 - [ ] (mm/dd/yyyy of completion) Create functions that output the following scoreboards (this will be used later)
   -  List of Evidence of Feature Completion
     - Status: Incomplete (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
     - Pull Requests
-     - PR link #1 (repeat as necessary)
+     - https://github.com/AwkwardJ/IT202-007/pull/31
     - Screenshots
      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-      - Screenshot #1 description explaining what you're trying to show
 
 - Milestone 3
   - [x] (12/12/2021) Users will have points associated with their account.
