@@ -75,6 +75,28 @@ function flash($msg = "", $color = "info")
         array_push($_SESSION['flash'], $message);
     }
 }
+
+function save_score($score, $user_id, $showFlash = false)
+{
+    if ($user_id < 1) {
+        flash("Error saving score, you may not be logged in", "warning");
+        return;
+    }
+    if ($score <= 0) {
+        flash("Scores of zero are not recorded", "warning");
+        return;
+    }
+    $db = getDB();
+    $stmt = $db->prepare("INSERT INTO BGD_Scores (score, user_id) VALUES (:score, :uid)");
+    try {
+        $stmt->execute([":score" => $score, ":uid" => $user_id]);
+        if ($showFlash) {
+            flash("Saved score of $score", "success");
+        }
+    } catch (PDOException $e) {
+        flash("Error saving score: " . var_export($e->errorInfo, true), "danger");
+    }
+}
 //Get top 10's
 /** Gets the top 10 scores for valid durations (day, week, month, lifetime) */
 function get_top_10($duration = "day")
@@ -155,131 +177,71 @@ function get_latest_scores($user_id, $limit = 10)
  * Will populate/refresh $_SESSION["user"]["account"] regardless.
  * Make sure this is called after the session has been set
  */
-function get_or_create_account()
+function get_random_str($length)
 {
-    if (is_logged_in()) {
-        //let's define our data structure first
-        //id is for internal references, account_number is user facing info, and balance will be a cached value of activity
-        $account = ["id" => -1, "account_number" => false, "balance" => 0];
-        //this should always be 0 or 1, but being safe
-        $query = "SELECT id, account, balance from BGD_Accounts where user_id = :uid LIMIT 1";
-        $db = getDB();
-        $stmt = $db->prepare($query);
-        try {
-            $stmt->execute([":uid" => get_user_id()]);
-            $result = $stmt->fetch(PDO::FETCH_ASSOC);
-            if (!$result) {
-                //account doesn't exist, create it
-                $created = false;
-                //we're going to loop here in the off chance that there's a duplicate
-                //it shouldn't be too likely to occur with a length of 12, but it's still worth handling such a scenario
+    //https://stackoverflow.com/a/13733588
+    //$bytes = random_bytes($length / 2);
+    //return bin2hex($bytes);
 
-                //you only need to prepare once
-                $query = "INSERT INTO BGD_Accounts (account, user_id) VALUES (:an, :uid)";
-                $stmt = $db->prepare($query);
-                $user_id = get_user_id(); //caching a reference
-                $account_number = "";
-                $aid = -1;
-                while (!$created) {
-                    try {
-                        $account_number = get_random_str(12);
-                        $stmt->execute([":an" => $account_number, ":uid" => $user_id]);
-                        $created = true; //if we got here it was a success, let's exit
-                        $aid = $db->lastInsertId();
-                        flash("Welcome! Your account has been created successfully", "success");
-                        change_bills(10, "welcome", -1, $aid, "Welcome bonus!");
-                    } catch (PDOException $e) {
-                        $code = se($e->errorInfo, 0, "00000", false);
-                        //if it's a duplicate error, just let the loop happen
-                        //otherwise throw the error since it's likely something looping won't resolve
-                        //and we don't want to get stuck here forever
-                        if (
-                            $code !== "23000"
-                        ) {
-                            throw $e;
-                        }
-                    }
-                }
-                //loop exited, let's assign the new values
-                $account["id"] = $aid;
-                $account["account_number"] = $account_number;
-            } else {
-                //$account = $result; //just copy it over
-                $account["id"] = $result["id"];
-                $account["account_number"] = $result["account"];
-                $account["balance"] = $result["balance"];
-            }
-        } catch (PDOException $e) {
-            flash("Technical error: " . var_export($e->errorInfo, true), "danger");
-        }
-        $_SESSION["user"]["account"] = $account; //storing the account info as a key under the user session
-        if (isset($created) && $created) {
-            refresh_account_balance();
-        }
-        //Note: if there's an error it'll initialize to the "empty" definition around line 161
-
-    } else {
-        flash("You're not logged in", "danger");
-    }
+    //https://stackoverflow.com/a/40974772
+    return substr(str_shuffle(str_repeat('0123456789abcdefghijklmnopqrstvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', 36)), 0, $length);
 }
-function get_account_balance()
+
+function get_points()
 {
-    if (is_logged_in() && isset($_SESSION["user"]["account"])) {
-        return (int)se($_SESSION["user"]["account"], "balance", 0, false);
+    if (is_logged_in()) { //we need to check for login first because "user" key may not exist
+        return (int)se($_SESSION["user"], "points", false, false);
     }
-    return 0;
+    return false;
 }
 function get_user_account_id()
 {
-    if (is_logged_in() && isset($_SESSION["user"]["account"])) {
-        return (int)se($_SESSION["user"]["account"], "id", 0, false);
+    if (is_logged_in() && isset($_SESSION["user"])) {
+        return (int)se($_SESSION["user"], "id", 0, false);
     }
     return 0;
 }
-function change_bills($bills, $reason, $src = -1, $dest = -1, $memo = "")
+function change_points($user_id, $point_change, $reason)
 {
-    //I'm choosing to ignore the record of 0 point transactions
-    if ($bills > 0) {
-        $query = "INSERT INTO BGD_Bills_History (src, dest, diff, reason, memo) 
-            VALUES (:acs, :acd, :pc, :r,:m), 
-            (:acs2, :acd2, :pc2, :r, :m)";
+    if ($point_change > 0) {
+        $query = "INSERT INTO Point_History (user_id, point_change, reason)
+            Values (:usr, :pc, :r)";
         //I'll insert both records at once, note the placeholders kept the same and the ones changed.
-        $params[":acs"] = $src;
-        $params[":acd"] = $dest;
+       
+        $params[":usr"] = $user_id;
+        $params[":pc"] = $point_change;
         $params[":r"] = $reason;
-        $params[":m"] = $memo;
-        $params[":pc"] = ($bills * -1);
+        
 
-        $params[":acs2"] = $dest;
-        $params[":acd2"] = $src;
-        $params[":pc2"] = $bills;
         $db = getDB();
         $stmt = $db->prepare($query);
         try {
             $stmt->execute($params);
-            //Only refresh the balance of the user if the logged in user's account is part of the transfer
-            //this is needed so future features don't waste time/resources or potentially cause an error when a calculation
-            //occurs without a logged in user
-            if ($src == get_user_account_id() || $dest == get_user_account_id()) {
-                refresh_account_balance();
-            }
+            //Only refresh the points of the user if the logged in user's id is part of the transfer
+            //this is needed so future features don't waste time/resources or potentially cause an error when a calculation 
+            refresh_account_balance($user_id);   
         } catch (PDOException $e) {
-            flash("Transfer error occurred: " . var_export($e->errorInfo, true), "danger");
+            flash("Error transfering points: " . var_export($e->errorInfo, true), "danger");
         }
     }
 }
-function refresh_account_balance()
+function refresh_account_balance($user_id)
 {
     if (is_logged_in()) {
-        //cache account balance via BGD_Bills_History history
-        $query = "UPDATE BGD_Accounts set balance = (SELECT IFNULL(SUM(diff), 0) from BGD_Bills_History WHERE src = :src) where id = :src";
+        //cache account balance via Points_History history
+        $query = "UPDATE Users set points = (SELECT IFNULL(SUM(point_change), 0) from Points_History WHERE user_id= :usr) WHERE id = :usr";
         $db = getDB();
         $stmt = $db->prepare($query);
-        try {
-            $stmt->execute([":src" => get_user_account_id()]);
-            get_or_create_account(); //refresh session data
-        } catch (PDOException $e) {
-            flash("Error refreshing account: " . var_export($e->errorInfo, true), "danger");
+        $stmt->execute([":uid"=>$user_id]);
+        $stmt = $db->prepare("SELECT points from Users where id = :uid");
+        try{
+            $stmt->execute([":uid"=>$user_id]);
+            $r = $stmt->fetch(PDO::FETCH_ASSOC);
+            $_SESSION["user"]["points"] = (int)se($r, "points", 0, false);
+        }
+        catch (PDOException $e) 
+        {
+            error_log("error getting points: " . var_export($e, true));
         }
     }
 }
@@ -405,5 +367,97 @@ function elog($data)
     echo "<br>" . var_export($data, true) . "<br>";
     error_log(var_export($data, true));
 }
-
+function calc_winners()
+{
+    $db = getDB();
+    //elog("Starting winner calc");
+    $calced_comps = [];
+    $stmt = $db->prepare("select c.id,c.title, first_place, second_place, third_place, current_reward 
+    from BGD_Competitions c JOIN BGD_Payout_Options po on c.payout_option = po.id 
+    where expires <= CURRENT_TIMESTAMP() AND did_calc = 0 AND current_participants >= min_participants LIMIT 10");
+    try {
+        $stmt->execute();
+        $r = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        if ($r) {
+            $rc = $stmt->rowCount();
+            elog("Validating $rc comps");
+            foreach ($r as $row) {
+                $fp = floatval(se($row, "first_place", 0, false) / 100);
+                $sp = floatval(se($row, "second_place", 0, false) / 100);
+                $tp = floatval(se($row, "third_place", 0, false) / 100);
+                $reward = (int)se($row, "current_reward", 0, false);
+                $title = se($row, "title", "-", false);
+                $fpr = ceil($reward * $fp);
+                $spr = ceil($reward * $sp);
+                $tpr = ceil($reward * $tp);
+                $comp_id = se($row, "id", -1, false);
+                
+                try {
+                    $r = get_top_scores_for_comp($comp_id, 3);
+                    if ($r) {
+                        $atleastOne = false;
+                        foreach ($r as $index => $row) {
+                            $aid = se($row, "account_id", -1, false);
+                            $score = se($row, "score", 0, false);
+                            $user_id = se($row, "user_id", -1, false);
+                            if ($index == 0) {
+                                if (change_points($fpr, "won-comp", -1, $aid, "First place in $title with score of $score")) {
+                                    $atleastOne = true;
+                                }
+                                elog("User $user_id First place in $title with score of $score");
+                            } else if ($index == 1) {
+                                if (change_points($spr, "won-comp", -1, $aid, "Second place in $title with score of $score")) {
+                                    $atleastOne = true;
+                                }
+                                elog("User $user_id Second place in $title with score of $score");
+                            } else if ($index == 1) {
+                                if (change_points($tpr, "won-comp", -1, $aid, "Third place in $title with score of $score")) {
+                                    $atleastOne = true;
+                                }
+                                elog("User $user_id Third place in $title with score of $score");
+                            }
+                        }
+                        if ($atleastOne) {
+                            array_push($calced_comps, $comp_id);
+                        }
+                    } else {
+                        elog("No eligible scores");
+                    }
+                } catch (PDOException $e) {
+                    error_log("Getting winners error: " . var_export($e, true));
+                }
+            }
+        } else {
+            //elog("No competitions ready");
+        }
+    } catch (PDOException $e) {
+        error_log("Getting Expired Comps error: " . var_export($e, true));
+    }
+    //closing calced comps
+    if (count($calced_comps) > 0) {
+        $query = "UPDATE BGD_Competitions set did_calc = 1 AND did_payout = 1 WHERE id in ";
+        $query = "(" . str_repeat("?,", count($calced_comps) - 1) . "?)";
+        elog("Close query: $query");
+        $stmt = $db->prepare($query);
+        try {
+            $stmt->execute($calced_comps);
+            $updated = $stmt->rowCount();
+            elog("Marked $updated comps complete and calced");
+        } catch (PDOException $e) {
+            error_log("Closing valid comps error: " . var_export($e, true));
+        }
+    } else {
+        //elog("No competitions to calc");
+    }
+    //close invalid comps
+    $stmt = $db->prepare("UPDATE BGD_Competitions set did_calc = 1 WHERE expires <= CURRENT_TIMESTAMP() AND current_participants < min_participants AND did_calc = 0");
+    try {
+        $stmt->execute();
+        $rows = $stmt->rowCount();
+        //elog("Closed $rows invalid competitions");
+    } catch (PDOException $e) {
+        error_log("Closing invalid comps error: " . var_export($e, true));
+    }
+    //elog("Done calc winners");
+}
 ?>

@@ -15,16 +15,17 @@ try {
     error_log("Error Getting Places: " . var_export($e, true));
 }
 //save
+$user_id = get_user_id();
 if (isset($_POST["title"]) && !empty($_POST["title"])) {
     $cost = (int)se($_POST, "starting_reward", 0, false);
     $cost++;
     $cost += (int)se($_POST, "join_cost", 0, false);
     $cost += (int)se($_POST, "min_participants", 0, false);
     $title = se($_POST, "title", "N/A", false);
-    $balance = get_account_balance();
+    $balance = get_points();
     if ($balance >= $cost) {
         $db->beginTransaction();
-        if (change_bills($cost, "create_comp", get_user_account_id(), -1, "Create Competition $title")) {
+        if (change_points($user_id, -$cost, "comp")) {
             $_POST["creator_id"] = get_user_id();
             $comp_id = save_data("BGD_Competitions", $_POST);
             if ($comp_id > 0) {
@@ -64,7 +65,7 @@ if (isset($_POST["title"]) && !empty($_POST["title"])) {
         </div>
         <div class="mb-3">
             <label for="mp" class="form-label">Min. Participants</label>
-            <input id="mp" name="min_participants" type="number" class="form-control" onchange="updateCost()" placeholder=">= 2" min="2" />
+            <input id="mp" name="min_participants" type="number" class="form-control" onchange="updateCost()" placeholder=">= 3" min="3" />
         </div>
         <div class="mb-3">
             <label for="jc" class="form-label">Join Cost</label>

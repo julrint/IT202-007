@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+require(__DIR__ . "/../../partials/nav.php");
+?><!DOCTYPE html>
 <html>
 <head>
 <title>Click Speed Test</title>
@@ -78,6 +80,7 @@
     <button id="start">Start</button>
   </div>
   <script type="text/javascript">
+    
     var score; // to store the current score
     var duration = 10; // 10 seconds
     var startTime; // start time
@@ -140,6 +143,19 @@
       ' seconds. It is ' + clicsBySeconds + 
       ' clicks by seconds. Try again!');
     }, 10);
+    let http = new XMLHttpRequest();
+                http.onreadystatechange = () => {
+                    if (http.readyState == 4) {
+                        if (http.status === 200) {
+                            let data = JSON.parse(http.responseText);
+                            console.log("received data", data);
+                            console.log("Saved score");
+                        }
+                        window.location.reload(); //lazily reloading the page to get a new nonce for next game
+                    }
+                }
+                http.open("POST", "api/save_scores.php", true);
+                http.send(`score=${score}`);
   }
 
   // we set a click event listener on the start button
@@ -154,19 +170,6 @@
       scoreTxt.textContent = score;
     }
   });
-  let http = new XMLHttpRequest();
-                http.onreadystatechange = () => {
-                    if (http.readyState == 4) {
-                        if (http.status === 200) {
-                            let data = JSON.parse(http.responseText);
-                            console.log("received data", data);
-                            console.log("Saved score");
-                        }
-                        window.location.reload(); //lazily reloading the page to get a new nonce for next game
-                    }
-                }
-                http.open("POST", "api/save_score.php", true);
-                http.send(`score=${score}`);
 </script>
 </body>
 </html>
