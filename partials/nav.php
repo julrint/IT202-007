@@ -59,17 +59,7 @@ require_once(__DIR__ . "/../lib/functions.php");
                         </ul>
                     </li>
                 <?php endif; ?>
-                <?php if (has_role("Admin")) : ?>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="rolesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Admin Items
-                        </a>
-                        <ul class="dropdown-menu bg-warning" aria-labelledby="rolesDropdown">
-                            <li><a class="dropdown-item" href="<?php echo get_url('admin/add_item.php'); ?>">Create</a></li>
-                            <li><a class="dropdown-item" href="<?php echo get_url('admin/list_items.php'); ?>">List</a></li>
-                        </ul>
-                    </li>
-                <?php endif; ?>
+               
                 <?php if (has_role("Admin")) : ?>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="rolesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -77,7 +67,7 @@ require_once(__DIR__ . "/../lib/functions.php");
                         </a>
                         <ul class="dropdown-menu bg-warning" aria-labelledby="rolesDropdown">
                             <li><a class="dropdown-item" href="<?php echo get_url('admin/give_bills.php'); ?>">Give Bills</a></li>
-                            <li><a class="dropdown-item" href="<?php echo get_url('admin/calc_winners.php'); ?>">Calc Winners</a></li>
+                            <li><a class="dropdown-item" href="<?php echo get_url('admin/calc.php'); ?>">Calc Winners</a></li>
                         </ul>
                     </li>
                 <?php endif; ?>

@@ -2,7 +2,7 @@
 //snippet from my functions.php
 function join_competition($comp_id, $user_id, $cost)
 {
-    $balance = get_account_balance();
+    $balance = get_points();
     if ($comp_id > 0) {
         if ($balance >= $cost) {
             $db = getDB();
@@ -14,7 +14,7 @@ function join_competition($comp_id, $user_id, $cost)
                     $cost = (int)se($r, "join_cost", 0, false);
                     $name = se($r, "title", "", false);
                     if ($balance >= $cost) {
-                        if (change_bills($cost, "join-comp", get_user_account_id(), -1, "Joining competition $name")) {
+                        if (change_points($user_id, -$cost, "Comp" )) {
                             if (add_to_competition($comp_id, $user_id)) {
                                 flash("Successfully joined $name", "success");
                             }
