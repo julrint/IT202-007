@@ -60,6 +60,9 @@ require(__DIR__ . "/../../partials/nav.php");
 
         return true;
     }
+        //ensure it returns false for an error and true for success
+        
+    
 </script>
 <?php
 //TODO 2: add PHP Code
@@ -98,7 +101,7 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
     if (!$hasError) {
         //TODO 4
         $db = getDB();
-        $stmt = $db->prepare("SELECT id, email, username, password from Users where email = :email OR username = :email");
+        $stmt = $db->prepare("SELECT id, email, username, points, password from Users where email = :email or username = :email");
         try {
             $r = $stmt->execute([":email" => $email]);
             if ($r) {
@@ -121,6 +124,10 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
                         } else {
                             $_SESSION["user"]["roles"] = []; //no roles
                         }
+                        //M2-Feat-Accounts
+                        //get_or_create_account();
+                        //Trigger calc winners since we don't have a better periodic place at the moment
+                        calc_winners();
                         die(header("Location: home.php"));
                     } else {
                         flash("Invalid password", "danger");
@@ -136,5 +143,5 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
 }
 ?>
 <?php
-require(__DIR__ . "/../../partials/flash.php");
+require(__DIR__ . "/../../partials/footer.php");
 ?>

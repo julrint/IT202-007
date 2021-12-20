@@ -1,5 +1,5 @@
 <div id="balance-value">
-    Points: <?php echo get_account_balance(); ?>
+    Points: <?php echo get_points(); ?>
 </div>
 <script>
     let bv = document.getElementById("balance-value");

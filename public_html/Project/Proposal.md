@@ -24,8 +24,7 @@
 
 - Milestone 1
   - Milestone 1
-  - [x] (11/11/2021 of completion) User will be able to register a new account
-  - [ ] (mm/dd/yyyy of completion) User will be able to register a new account
+  - [x] (11/11/2021) User will be able to register a new account
     -  List of Evidence of Feature Completion
       - Status: Completed (Completed, Partially working, Incomplete, Pending)
       - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
@@ -37,10 +36,7 @@
       - Screenshots
         - Screenshot: ![SuccessfullRegistration](https://user-images.githubusercontent.com/55968472/141397729-977fff7a-ec25-45c8-a460-d8e25367cd96.JPG)
           - Successfully registered new account
-  - [x] (11/11/2021 of completion) User will be able to login to their account (given they enter the correct credentials)
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-  - [ ] (mm/dd/yyyy of completion) User will be able to login to their account (given they enter the correct credentials)
+  - [x] (11/11/2021) User will be able to login to their account (given they enter the correct credentials)
     -  List of Evidence of Feature Completion
       - Status: Completed (Completed, Partially working, Incomplete, Pending)
       - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
@@ -52,10 +48,7 @@
       - Screenshots
         - Screenshot: ![SuccessfullLogin](https://user-images.githubusercontent.com/55968472/141399445-33f30f35-dbce-4c68-9117-dae20cce9df6.JPG)
           - Successfull login attempt.
-  - [x] (11/11/2021 of completion) User will be able to logout
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-  - [ ] (mm/dd/yyyy of completion) User will be able to logout
+  - [x] (11/11/2021) User will be able to logout
     -  List of Evidence of Feature Completion
       - Status: Partially Working (Completed, Partially working, Incomplete, Pending)
       - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
@@ -65,53 +58,41 @@
         - https://github.com/AwkwardJ/IT202-007/pull/23 (repeat as necessary)
         - PR link #1 (repeat as necessary)
       - Screenshots
-        - No screenshot available since logout message wont show (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot will be available once message is able to be shown
-  - [x] (11/11/2021 of completion) Basic security rules implemented
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-  - [ ] (mm/dd/yyyy of completion) Basic security rules implemented
+        -![image](https://user-images.githubusercontent.com/55968472/146690314-8b81bbd7-68e4-48e7-9714-220f069b9266.png)
+          - Screenshot of logged out user
+  - [x] (11/11/2021) Basic security rules implemented
     -  List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
+      - Status: Completed (Completed, Partially working, Incomplete, Pending)
+      - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
+      - Pull Requests
+        - https://github.com/AwkwardJ/IT202-007/pull/23
+        - PR link #1 (repeat as necessary)
+      - Screenshots
+        - ![image](https://user-images.githubusercontent.com/55968472/146690776-fe030c28-0b3a-49f6-aebe-b44459374105.png)
+          - function in functions.php that will be called in other functions
+  - [x] (12/19/2021) Basic Roles implemented
+    -  List of Evidence of Feature Completion
+      - Status: Completed (Completed, Partially working, Incomplete, Pending)
       - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
       - Pull Requests
         - https://github.com/AwkwardJ/IT202-007/pull/23
         - PR link #1 (repeat as necessary)
       - Screenshots
-        - ![basicSecurity](https://user-images.githubusercontent.com/55968472/141411749-56098cbb-e839-4d08-a91d-819de412709c.JPG)
-          - Shows that it is checking to see if someone is logged in by showing logged in person's info and table shown as well
-  - [x] (11/11/2021 of completion) Basic Roles implemented
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-  - [ ] (mm/dd/yyyy of completion) Basic Roles implemented
-    -  List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
-      - Pull Requests
-        - https://github.com/AwkwardJ/IT202-007/pull/23
-        - PR link #1 (repeat as necessary)
-      - Screenshots
+      - ![image](https://user-images.githubusercontent.com/55968472/146690670-2dbc7d8c-0919-45f6-91f7-f28d9b450861.png)
         - ![Tables](https://user-images.githubusercontent.com/55968472/141411197-29924848-4b43-4c13-ae62-f7781d2abda3.JPG)
-          - Tables have been created, need to fix up people not showing up even though they are in users.
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-  - [ ] (mm/dd/yyyy of completion) Site should have basic styles/theme applied; everything should be styled
+          - Tables have been created and function is implemented to determine if person is admin.
+  - [x] (12/19/2021) Site should have basic styles/theme applied; everything should be styled
     -  List of Evidence of Feature Completion
-      - Status: Incomplete (Completed, Partially working, Incomplete, Pending)
+      - Status: Completed (Completed, Partially working, Incomplete, Pending)
       - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
       - Pull Requests
         - https://github.com/AwkwardJ/IT202-007/pull/23
         - PR link #1 (repeat as necessary)
       - Screenshots
-        - ![LoginScreen](https://user-images.githubusercontent.com/55968472/141407322-b61a2d12-a0aa-4a49-b596-f29e40ba6c86.JPG)
-          - Current theme, much work to be one on text
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-  - [ ] (mm/dd/yyyy of completion) Any output messages/errors should be “user friendly”
+        - ![image](https://user-images.githubusercontent.com/55968472/146690378-d9a04dae-0c54-4e09-b25b-ce79eddafe4a.png)
+          - Current theme
+  - [x] (mm/dd/yyyy of completion) Any output messages/errors should be “user friendly”
     -  List of Evidence of Feature Completion
       - Status: Partially working (Completed, Partially working, Incomplete, Pending)
       - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
@@ -125,31 +106,28 @@
           - Output message does come up, but when entering the wrong password, it doesnt appear until login is successful second try
         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
           - Screenshot #1 description explaining what you're trying to show
-  - [ ] (mm/dd/yyyy of completion) User will be able to see their profile
-    -  List of Evidence of Feature Completion
-      - Status: Partially working (Completed, Partially working, Incomplete, Pending)
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
+  - [x] (mm/dd/yyyy of completion) User will be able to see their profile
+      -email, username, etc.
+      - Status: Completed (Completed, Partially working, Incomplete, Pending)
       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
       - Pull Requests
         - https://github.com/AwkwardJ/IT202-007/pull/23
         - PR link #1 (repeat as necessary)
       - Screenshots
-        - ![LoginInfo](https://user-images.githubusercontent.com/55968472/141409955-d9329265-81bb-4b3c-aa80-6bd9050e5270.JPG)
-          - User information is shown when logged in but not in the correct format
+        - ![image](https://user-images.githubusercontent.com/55968472/146690490-d607c846-441d-4b33-9752-b74f1b68a923.png)
+         - User information is shown when logged in but not in the correct format
         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
           - Screenshot #1 description explaining what you're trying to show
-  - [ ] (mm/dd/yyyy of completion) User will be able to edit their profile
-    -  List of Evidence of Feature Completion
-      - Status: Incomplete (Completed, Partially working, Incomplete, Pending)
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
-      - Pull Requests
+  - [x] (12/19/2021) User will be able to edit their profile
+  - List of Evidence of Feature Completion
+  - Status: Complete (Completed, Partially working, Incomplete, Pending)
+  - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+  - Pull Requests
         - https://github.com/AwkwardJ/IT202-007/pull/23
         - PR link #1 (repeat as necessary)
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - No screenshot yet, I have not given the option the edit their profile yet. 
-          - Screenshot #1 description explaining what you're trying to show
+          - ![image](https://user-images.githubusercontent.com/55968472/146690378-d9a04dae-0c54-4e09-b25b-ce79eddafe4a.png)
+          - User is able to update their profile
 - Milestone 2
 - [x] (12/04/2021) Pick a simple game to implement, anything that generates a score that’s more advanced than a simple random number generator (may build off of a sample from the site shared in class)
   -  Game chosen: Click test speed, the player will click as fast as they can to score the highest click per second they can get. 
@@ -164,30 +142,30 @@
   -  Need to add scores table to save scores for the longed in player.
     - Status: Partially working (Completed, Partially working, Incomplete, Pending)
     - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
-=======
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
       - PR link https://github.com/AwkwardJ/IT202-007/pull/31
     - Screenshots
       - ![image](https://user-images.githubusercontent.com/55968472/144732661-aa50ae76-6026-4dce-8504-15e100567d12.png)
-        - Shows the score after the player has played
-- [ ] (mm/dd/yyyy of completion) The user will be able to see their last 10 scores
-  -  The score for some reason will not save to the table after playing the game
-    - Status: Incomplete (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
+      -![image](https://user-images.githubusercontent.com/55968472/146690899-d7878735-7b7d-4341-9fdf-bc217214351c.png)
+        - Shows the score after the player has played and the tabl of scores
+- [x] (12/19/2021) The user will be able to see their last 10 scores
+  -  Have functions and shows up, but scores not being saved yet for some reason to display
+    - Status: Partially Working (Completed, Partially working, Incomplete, Pending)
+    - Direct Link:  https://jar236-prod.herokuapp.com/Project/login.php
     - Pull Requests
-     - https://github.com/AwkwardJ/IT202-007/pull/31
+      -  link https://github.com/AwkwardJ/IT202-007/pull/31
     - Screenshots
-    -
-        - Screenshot #1 description explaining what you're trying to show
-- [ ] (mm/dd/yyyy of completion) Create functions that output the following scoreboards (this will be used later)
-  -  List of Evidence of Feature Completion
-    - Status: Incomplete (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
+      - ![image](https://user-images.githubusercontent.com/55968472/146699628-693c469b-c9fe-416c-bc98-bc8a00305a04.png)
+        - Scoreboard with empty scores, for now.
+- [x] (mm/dd/yyyy of completion) Create functions that output the following scoreboards (this will be used later)
+  -  top 10: weekly, monthly, lifetime
+    - Status: Complete (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-     - https://github.com/AwkwardJ/IT202-007/pull/31
+     - PR link #1 (repeat as necessary)
     - Screenshots
-     - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+     - ![image](https://user-images.githubusercontent.com/55968472/146699845-6e8085ce-d9fa-422f-98e6-6664225381bb.png)
+      - function of top 10 scores
 
 - Milestone 3
   - [x] (12/12/2021) Users will have points associated with their account.
@@ -195,14 +173,14 @@
     - Status: Complete (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-     - PR link #1 (repeat as necessary)
+     - PR link https://github.com/AwkwardJ/IT202-007/pull/36 
     - ![image](https://user-images.githubusercontent.com/55968472/145741822-1b0dabe2-265c-4268-92e6-958de813daa9.png)
      - Showing points on profile(top right)
 - [x] (12/12/2021) Create a PointsHistory table (id, user_id, point_change, reason, created)
     - Status: Complete (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-     - PR link #1 (repeat as necessary)
+     - PR link https://github.com/AwkwardJ/IT202-007/pull/36
     - Screenshots
      - ![image](https://user-images.githubusercontent.com/55968472/145742237-7b0761f3-e503-4fa3-b09c-5f4fb05596e4.png)
         - Showing table that was made, called bills history to avoid errors in code. But this represents point history
@@ -210,7 +188,7 @@
     - Status: Complete (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-     - PR link #1 (repeat as necessary)
+     - PR link https://github.com/AwkwardJ/IT202-007/pull/36
     - Screenshots
      - ![image](https://user-images.githubusercontent.com/55968472/145742458-cb3ca1d2-c6b5-4577-a6ce-32a0cff69d42.png)
         - Showing table of competition, with the required colums
@@ -218,7 +196,7 @@
     - Status: Complete (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-     - PR link #1 (repeat as necessary)
+     - PR link https://github.com/AwkwardJ/IT202-007/pull/36
     - Screenshots
      - ![image](https://user-images.githubusercontent.com/55968472/145742757-766e2bcc-9cc0-4335-9998-bbff2c2ce537.png)
       - Screenshot shows that user is able to create competition
@@ -227,7 +205,7 @@
     - Status: Incomplete (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link https://github.com/AwkwardJ/IT202-007/pull/36
     - Screenshots
       - ![image](https://user-images.githubusercontent.com/55968472/145744414-031385ef-f3fc-4b54-90e2-0dd756c415bf.png)
         - Tried messing with create competition but cant get it to increment when participants go up
@@ -236,27 +214,27 @@
     - Status: partially working (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link https://github.com/AwkwardJ/IT202-007/pull/36
     - Screenshots
-      - ![image](https://user-images.githubusercontent.com/55968472/145744545-84e64177-ad87-4dd9-be89-ecdfa2edf148.png)
+      - ![image](https://user-images.githubusercontent.com/55968472/146701414-a5e30856-d3be-4e2f-844a-b843352cd93c.png)
         - Shows active competitions but, since I dont have enough points, you can only see that there is none made, still works though
  - [x] (mm/dd/yyyy of completion) Will need an association table CompetitionParticipants (id, comp_id, user_id, created)
   -  List of Evidence of Feature Completion
     - Status: Completed (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link https://github.com/AwkwardJ/IT202-007/pull/36
     - Screenshots
       - ![image](https://user-images.githubusercontent.com/55968472/145744749-a114e266-61f2-41e7-b8e3-bedad6a14e5d.png)
         - Table is shown as BGD_userComs but it is the competition particpants table showing the need(id, comp_id, user_id, crated)
-- [ ] (mm/dd/yyyy of completion) User can join active competitions
-  -  Cant do yet,once admin account is working, there will be test done to see if I can join
+- [x] (12/19/2021) User can join active competitions
+  -  Cant join yet because of a payement issue but does give option to join
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link https://github.com/AwkwardJ/IT202-007/pull/36
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+      - ![image](https://user-images.githubusercontent.com/55968472/146701414-a5e30856-d3be-4e2f-844a-b843352cd93c.png)
         - Screenshot #1 description explaining what you're trying to show
 - [x] (12/12/2021) Create function that calculates competition winners
     - get all expired and not paid_out competitions
@@ -264,7 +242,7 @@
     - Status: complete (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link https://github.com/AwkwardJ/IT202-007/pull/36
     - Screenshots
       - ![image](https://user-images.githubusercontent.com/55968472/145746501-f49ae9cd-23d7-4dd0-a619-c3b65ef5940b.png)
         - Image of part of the function
