@@ -190,9 +190,9 @@ function get_random_str($length)
 function get_points()
 {
     if (is_logged_in()) { //we need to check for login first because "user" key may not exist
-        return (int)se($_SESSION["user"], "points", false, false);
+        return (int)se($_SESSION["user"], "points", 0,false);
     }
-    return false;
+    return 0;
 }
 function get_user_account_id()
 {
@@ -203,7 +203,7 @@ function get_user_account_id()
 }
 function change_points($user_id, $point_change, $reason)
 {
-    if ($point_change > 0) {
+    if ($point_change != 0) {
         $query = "INSERT INTO Point_History (user_id, point_change, reason)
             Values (:usr, :pc, :r)";
         //I'll insert both records at once, note the placeholders kept the same and the ones changed.
@@ -211,31 +211,37 @@ function change_points($user_id, $point_change, $reason)
         $params[":usr"] = $user_id;
         $params[":pc"] = $point_change;
         $params[":r"] = $reason;
-        
-
+        error_log("Points change query $query");
+        error_log("Points change params: " . var_export($params, true));
         $db = getDB();
         $stmt = $db->prepare($query);
         try {
             $stmt->execute($params);
             //Only refresh the points of the user if the logged in user's id is part of the transfer
             //this is needed so future features don't waste time/resources or potentially cause an error when a calculation 
-            refresh_account_balance($user_id);   
+            error_log("Points changed for $user_id by $point_change for $reason");
+            refresh_account_balance($user_id);
+            error_log("After balance refresh");
+            return true;
         } catch (PDOException $e) {
             flash("Error transfering points: " . var_export($e->errorInfo, true), "danger");
+            error_log("error transfering points: " . var_export($e, true));
         }
     }
+    return false;
 }
+
 function refresh_account_balance($user_id)
 {
     if (is_logged_in()) {
-        //cache account balance via Points_History history
-        $query = "UPDATE Users set points = (SELECT IFNULL(SUM(point_change), 0) from Points_History WHERE user_id= :usr) WHERE id = :usr";
+        //cache account balance via Point_History history
+        $query = "UPDATE Users set points = (SELECT IFNULL(SUM(point_change), 0) from Point_History WHERE user_id= :usr) WHERE id = :usr";
         $db = getDB();
         $stmt = $db->prepare($query);
-        $stmt->execute([":uid"=>$user_id]);
+        $stmt->execute([":usr"=>$user_id]);
         $stmt = $db->prepare("SELECT points from Users where id = :uid");
         try{
-            $stmt->execute([":uid"=>$user_id]);
+            $stmt->execute([":usr"=>$user_id]);
             $r = $stmt->fetch(PDO::FETCH_ASSOC);
             $_SESSION["user"]["points"] = (int)se($r, "points", 0, false);
         }
@@ -458,6 +464,102 @@ function calc_winners()
     } catch (PDOException $e) {
         error_log("Closing invalid comps error: " . var_export($e, true));
     }
+}
     //elog("Done calc winners");
+    function update_participants($comp_id)
+{
+    $db = getDB();
+    $stmt = $db->prepare("UPDATE BGD_Competitions set current_participants = (SELECT IFNULL(COUNT(1),0) FROM BGD_UserComps WHERE competition_id = :cid), 
+    current_reward = IF(join_cost > 0, current_reward + CEILING(join_cost * 0.5), current_reward) WHERE id = :cid");
+    try {
+        $stmt->execute([":cid" => $comp_id]);
+        return true;
+    } catch (PDOException $e) {
+        error_log("Update competition participant error: " . var_export($e, true));
+    }
+    return false;
+}
+
+function add_to_competition($comp_id, $user_id)
+{
+    $db = getDB();
+    $stmt = $db->prepare("INSERT INTO BGD_UserComps (user_id, competition_id) VALUES (:uid, :cid)");
+    try {
+        $stmt->execute([":uid" => $user_id, ":cid" => $comp_id]);
+        update_participants($comp_id);
+        return true;
+    } catch (PDOException $e) {
+        error_log("Join Competition error: " . var_export($e, true));
+    }
+    return false;
+}
+function get_top_scores_for_comp($comp_id, $limit = 10)
+{
+    $db = getDB();
+    //below if a user can win more than one place
+    /*$stmt = $db->prepare(
+        "SELECT score, s.created, username, u.id as user_id FROM BGD_Scores s 
+    JOIN BGD_UserComps uc on uc.user_id = s.user_id 
+    JOIN BGD_Competitions c on c.id = uc.competition_id
+    JOIN Users u on u.id = s.user_id WHERE c.id = :cid AND s.score >= c.min_score AND s.created 
+    BETWEEN uc.created AND c.expires ORDER BY s.score desc LIMIT :limit"
+    );*/
+    //Below if a user can't win more than one place
+    $stmt = $db->prepare("SELECT * FROM (SELECT s.user_id, s.score,s.created, a.id as account_id, DENSE_RANK() OVER (PARTITION BY s.user_id ORDER BY s.score desc) as `rank` FROM BGD_Scores s
+    JOIN BGD_UserComps uc on uc.user_id = s.user_id
+    JOIN BGD_Competitions c on uc.competition_id = c.id
+    WHERE c.id = :cid AND s.created BETWEEN uc.created AND c.expires
+    )as t where `rank` = 1 ORDER BY score desc LIMIT :limit");
+    $scores = [];
+    try {
+        $stmt->bindValue(":cid", $comp_id, PDO::PARAM_INT);
+        $stmt->bindValue(":limit", $limit, PDO::PARAM_INT);
+        $stmt->execute();
+        $r = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        if ($r) {
+            $scores = $r;
+        }
+    } catch (PDOException $e) {
+        flash("There was a problem fetching scores, please try again later", "danger");
+        error_log("List competition scores error: " . var_export($e, true));
+    }
+    return $scores;
+}
+
+function join_competition($comp_id, $user_id, $cost)
+{
+    $balance = get_points();
+    if ($comp_id > 0) {
+        if ($balance >= $cost) {
+            $db = getDB();
+            $stmt = $db->prepare("SELECT title, join_cost from BGD_Competitions where id = :id");
+            try {
+                $stmt->execute([":id" => $comp_id]);
+                $r = $stmt->fetch(PDO::FETCH_ASSOC);
+                if ($r) {
+                    $cost = (int)se($r, "join_cost", 0, false);
+                    $name = se($r, "title", "", false);
+                    if ($balance >= $cost) {
+                        if (change_points($user_id, -$cost, "Comp" )) {
+                            if (add_to_competition($comp_id, $user_id)) {
+                                flash("Successfully joined $name", "success");
+                            }
+                        } else {
+                            flash("Failed to pay for competition", "danger");
+                        }
+                    } else {
+                        flash("You can't afford to join this competition", "warning");
+                    }
+                }
+            } catch (PDOException $e) {
+                error_log("Comp lookup error " . var_export($e, true));
+                flash("There was an error looking up the competition", "danger");
+            }
+        } else {
+            flash("You can't afford to join this competition", "warning");
+        }
+    } else {
+        flash("Invalid competition, please try again", "danger");
+    }
 }
 ?>

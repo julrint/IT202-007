@@ -148,24 +148,24 @@
       - ![image](https://user-images.githubusercontent.com/55968472/144732661-aa50ae76-6026-4dce-8504-15e100567d12.png)
       -![image](https://user-images.githubusercontent.com/55968472/146690899-d7878735-7b7d-4341-9fdf-bc217214351c.png)
         - Shows the score after the player has played and the tabl of scores
-- [ ] (mm/dd/yyyy of completion) The user will be able to see their last 10 scores
-  -  List of Evidence of Feature Completion
-    - Status: Incomplete (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+- [x] (12/19/2021) The user will be able to see their last 10 scores
+  -  Have functions and shows up, but scores not being saved yet for some reason to display
+    - Status: Partially Working (Completed, Partially working, Incomplete, Pending)
+    - Direct Link:  https://jar236-prod.herokuapp.com/Project/login.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      -  link https://github.com/AwkwardJ/IT202-007/pull/31
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-- [ ] (mm/dd/yyyy of completion) Create functions that output the following scoreboards (this will be used later)
-  -  List of Evidence of Feature Completion
-    - Status: Incomplete (Completed, Partially working, Incomplete, Pending)
+      - ![image](https://user-images.githubusercontent.com/55968472/146699628-693c469b-c9fe-416c-bc98-bc8a00305a04.png)
+        - Scoreboard with empty scores, for now.
+- [x] (mm/dd/yyyy of completion) Create functions that output the following scoreboards (this will be used later)
+  -  top 10: weekly, monthly, lifetime
+    - Status: Complete (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
      - PR link #1 (repeat as necessary)
     - Screenshots
-     - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-      - Screenshot #1 description explaining what you're trying to show
+     - ![image](https://user-images.githubusercontent.com/55968472/146699845-6e8085ce-d9fa-422f-98e6-6664225381bb.png)
+      - function of top 10 scores
 
 - Milestone 3
   - [x] (12/12/2021) Users will have points associated with their account.
@@ -227,14 +227,14 @@
     - Screenshots
       - ![image](https://user-images.githubusercontent.com/55968472/145744749-a114e266-61f2-41e7-b8e3-bedad6a14e5d.png)
         - Table is shown as BGD_userComs but it is the competition particpants table showing the need(id, comp_id, user_id, crated)
-- [ ] (mm/dd/yyyy of completion) User can join active competitions
-  -  Cant do yet,once admin account is working, there will be test done to see if I can join
+- [x] (12/19/2021) User can join active competitions
+  -  Cant join yet because of a payement issue but does give option to join
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
       - PR link #1 (repeat as necessary)
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+      - ![image](https://user-images.githubusercontent.com/55968472/146701414-a5e30856-d3be-4e2f-844a-b843352cd93c.png)
         - Screenshot #1 description explaining what you're trying to show
 - [x] (12/12/2021) Create function that calculates competition winners
     - get all expired and not paid_out competitions
