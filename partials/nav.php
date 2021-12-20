@@ -66,7 +66,7 @@ require_once(__DIR__ . "/../lib/functions.php");
                             Admin Misc
                         </a>
                         <ul class="dropdown-menu bg-warning" aria-labelledby="rolesDropdown">
-                            <li><a class="dropdown-item" href="<?php echo get_url('admin/give_bills.php'); ?>">Give Bills</a></li>
+                            <li><a class="dropdown-item" href="<?php echo get_url('admin/give_bills.php'); ?>">Give Points</a></li>
                             <li><a class="dropdown-item" href="<?php echo get_url('admin/calc.php'); ?>">Calc Winners</a></li>
                         </ul>
                     </li>
