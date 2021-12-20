@@ -173,14 +173,14 @@
     - Status: Complete (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-     - PR link #1 (repeat as necessary)
+     - PR link https://github.com/AwkwardJ/IT202-007/pull/36 
     - ![image](https://user-images.githubusercontent.com/55968472/145741822-1b0dabe2-265c-4268-92e6-958de813daa9.png)
      - Showing points on profile(top right)
 - [x] (12/12/2021) Create a PointsHistory table (id, user_id, point_change, reason, created)
     - Status: Complete (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-     - PR link #1 (repeat as necessary)
+     - PR link https://github.com/AwkwardJ/IT202-007/pull/36
     - Screenshots
      - ![image](https://user-images.githubusercontent.com/55968472/145742237-7b0761f3-e503-4fa3-b09c-5f4fb05596e4.png)
         - Showing table that was made, called bills history to avoid errors in code. But this represents point history
@@ -188,7 +188,7 @@
     - Status: Complete (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-     - PR link #1 (repeat as necessary)
+     - PR link https://github.com/AwkwardJ/IT202-007/pull/36
     - Screenshots
      - ![image](https://user-images.githubusercontent.com/55968472/145742458-cb3ca1d2-c6b5-4577-a6ce-32a0cff69d42.png)
         - Showing table of competition, with the required colums
@@ -196,7 +196,7 @@
     - Status: Complete (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-     - PR link #1 (repeat as necessary)
+     - PR link https://github.com/AwkwardJ/IT202-007/pull/36
     - Screenshots
      - ![image](https://user-images.githubusercontent.com/55968472/145742757-766e2bcc-9cc0-4335-9998-bbff2c2ce537.png)
       - Screenshot shows that user is able to create competition
@@ -205,7 +205,7 @@
     - Status: Incomplete (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link https://github.com/AwkwardJ/IT202-007/pull/36
     - Screenshots
       - ![image](https://user-images.githubusercontent.com/55968472/145744414-031385ef-f3fc-4b54-90e2-0dd756c415bf.png)
         - Tried messing with create competition but cant get it to increment when participants go up
@@ -214,16 +214,16 @@
     - Status: partially working (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link https://github.com/AwkwardJ/IT202-007/pull/36
     - Screenshots
-      - ![image](https://user-images.githubusercontent.com/55968472/145744545-84e64177-ad87-4dd9-be89-ecdfa2edf148.png)
+      - ![image](https://user-images.githubusercontent.com/55968472/146701414-a5e30856-d3be-4e2f-844a-b843352cd93c.png)
         - Shows active competitions but, since I dont have enough points, you can only see that there is none made, still works though
  - [x] (mm/dd/yyyy of completion) Will need an association table CompetitionParticipants (id, comp_id, user_id, created)
   -  List of Evidence of Feature Completion
     - Status: Completed (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link https://github.com/AwkwardJ/IT202-007/pull/36
     - Screenshots
       - ![image](https://user-images.githubusercontent.com/55968472/145744749-a114e266-61f2-41e7-b8e3-bedad6a14e5d.png)
         - Table is shown as BGD_userComs but it is the competition particpants table showing the need(id, comp_id, user_id, crated)
@@ -232,7 +232,7 @@
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link https://github.com/AwkwardJ/IT202-007/pull/36
     - Screenshots
       - ![image](https://user-images.githubusercontent.com/55968472/146701414-a5e30856-d3be-4e2f-844a-b843352cd93c.png)
         - Screenshot #1 description explaining what you're trying to show
@@ -242,7 +242,7 @@
     - Status: complete (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link https://github.com/AwkwardJ/IT202-007/pull/36
     - Screenshots
       - ![image](https://user-images.githubusercontent.com/55968472/145746501-f49ae9cd-23d7-4dd0-a619-c3b65ef5940b.png)
         - Image of part of the function
