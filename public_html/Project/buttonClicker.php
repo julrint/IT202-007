@@ -129,47 +129,50 @@ require(__DIR__ . "/../../partials/nav.php");
 
   // end game method
   function endGame() {
-    // we write final stats
-    var clicsBySeconds = (score / duration).toFixed(2);
-    timerTxt.textContent = duration.toFixed(3);
-    clicksTxt.textContent = clicsBySeconds;
-    // we show start button to play an other game
-    show(startBtn);
+    if(ended)
+    {
+      // we write final stats
+      var clicsBySeconds = (score / duration).toFixed(2);
+      timerTxt.textContent = duration.toFixed(3);
+      clicksTxt.textContent = clicsBySeconds;
+      // we show start button to play an other game
+      show(startBtn);
 
-    // we display result to the user in delayed mode 
-    //to update DOM elements just before the alert
-    setTimeout(function() {
-      alert('You made ' + score + ' clicks in ' + duration + 
-      ' seconds. It is ' + clicsBySeconds + 
-      ' clicks by seconds. Try again!');
-    }, 10);
-    let http = new XMLHttpRequest();
-                http.onreadystatechange = () => {
-                    if (http.readyState == 4) {
-                        if (http.status === 200) {
-                            let data = JSON.parse(http.responseText);
-                            console.log("received data", data);
-                            console.log("Saved score");
-                        }
-                        window.location.reload(); //lazily reloading the page to get a new nonce for next game
-                    }
-                }
-                http.open("POST", "api/save_scores.php", true);
-                http.send(`score=${score}`);
-  }
-
-  // we set a click event listener on the start button
-  startBtn.addEventListener("click", function(e) {
-    startGame();
-  });
-
-  // we add a click event listener on the click area div to update the score when the user will click
-  clickArea.addEventListener("click", function(e) {
-    if (!ended) {
-      score++;
-      scoreTxt.textContent = score;
+      // we display result to the user in delayed mode 
+      //to update DOM elements just before the alert
+      setTimeout(function() {
+        alert('You made ' + score + ' clicks in ' + duration + 
+        ' seconds. It is ' + clicsBySeconds + 
+        ' clicks by seconds. Try again!');
+      }, 10);
+      let http = new XMLHttpRequest();
+                  http.onreadystatechange = () => {
+                      if (http.readyState == 4) {
+                          if (http.status === 200) {
+                              let data = JSON.parse(http.responseText);
+                              console.log("received data", data);
+                              console.log("Saved score");
+                          }
+                          window.location.reload(); //lazily reloading the page to get a new nonce for next game
+                      }
+                  }
+                  http.open("POST", "api/save_scores.php", true);
+                  http.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                  http.send(`score=${score}`);         
     }
-  });
+  }
+    // we set a click event listener on the start button
+    startBtn.addEventListener("click", function(e) {
+      startGame();
+    });
+
+    // we add a click event listener on the click area div to update the score when the user will click
+    clickArea.addEventListener("click", function(e) {
+      if (!ended) {
+        score++;
+        scoreTxt.textContent = score;
+      }
+    });
 </script>
 </body>
 </html>
