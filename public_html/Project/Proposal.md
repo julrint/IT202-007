@@ -171,14 +171,14 @@
   - [x] (12/12/2021) Users will have points associated with their account.
   -  Points show up on profile page on top right
     - Status: Complete (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
     - Pull Requests
      - PR link https://github.com/AwkwardJ/IT202-007/pull/36 
     - ![image](https://user-images.githubusercontent.com/55968472/145741822-1b0dabe2-265c-4268-92e6-958de813daa9.png)
      - Showing points on profile(top right)
 - [x] (12/12/2021) Create a PointsHistory table (id, user_id, point_change, reason, created)
     - Status: Complete (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php 
     - Pull Requests
      - PR link https://github.com/AwkwardJ/IT202-007/pull/36
     - Screenshots
@@ -186,7 +186,7 @@
         - Showing table that was made, called bills history to avoid errors in code. But this represents point history
 - [x] (12/12/2021) Competitions table should have the following columns (id, name, created, duration, expires (now + duration), current_reward, starting_reward, join_fee, current_participants, min_participants, paid_out (boolean), min_score, first_place_per, second_place_per, third_place_per, cost_to_create, created, modified)
     - Status: Complete (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
     - Pull Requests
      - PR link https://github.com/AwkwardJ/IT202-007/pull/36
     - Screenshots
@@ -194,7 +194,7 @@
         - Showing table of competition, with the required colums
  - [x] (12/12/2021) User will be able to create a competition
     - Status: Complete (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
     - Pull Requests
      - PR link https://github.com/AwkwardJ/IT202-007/pull/36
     - Screenshots
@@ -203,7 +203,7 @@
 - [ ] (mm/dd/yyyy of completion) Each new participant causes the Reward value to increase by at least 1 or 50% of the joining fee rounded up
   -  List of Evidence of Feature Completion
     - Status: Incomplete (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
     - Pull Requests
       - PR link https://github.com/AwkwardJ/IT202-007/pull/36
     - Screenshots
@@ -212,7 +212,7 @@
 - [x] (12/12/2021) Have a page where the User can see active competitions (not expired)
   -  List of Evidence of Feature Completion
     - Status: partially working (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
     - Pull Requests
       - PR link https://github.com/AwkwardJ/IT202-007/pull/36
     - Screenshots
@@ -221,7 +221,7 @@
  - [x] (mm/dd/yyyy of completion) Will need an association table CompetitionParticipants (id, comp_id, user_id, created)
   -  List of Evidence of Feature Completion
     - Status: Completed (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
     - Pull Requests
       - PR link https://github.com/AwkwardJ/IT202-007/pull/36
     - Screenshots
@@ -230,7 +230,7 @@
 - [x] (12/19/2021) User can join active competitions
   -  Cant join yet because of a payement issue but does give option to join
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
     - Pull Requests
       - PR link https://github.com/AwkwardJ/IT202-007/pull/36
     - Screenshots
@@ -240,7 +240,7 @@
     - get all expired and not paid_out competitions
     - check tht particapnts count against the min required, get top 3 winners
     - Status: complete (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
     - Pull Requests
       - PR link https://github.com/AwkwardJ/IT202-007/pull/36
     - Screenshots
