@@ -161,7 +161,6 @@ try {
     <?php if (!$edit) : ?>
         <div>Username: <?php se($username); ?></div>
         <dive>Joined: <?php se($created); ?></div>
-        <dive>Email: <?php se($email); ?></dive>
         <!-- TODO any other public info -->
     <?php endif; ?>
 
