@@ -25,22 +25,21 @@ if (isset($_POST["search"])) {
     }
 }
 
-if (isset($_POST["user"]) && isset($_POST["bills"])) {
+if (isset($_POST["user"]) && isset($_POST["points"])) {
     $user = se($_POST, "user", 0, false);
-    $bills = (int)se($_POST, "bills", 0, false);
+    $bills = (int)se($_POST, "points", 0, false);
     $db = getDB();
-    $stmt = $db->prepare("SELECT id from BGD_Accounts where user_id = :uid");
-    $account_id = -1;
+    $stmt = $db->prepare("SELECT points from Users where id = :uid");
     try {
         $stmt->execute([":uid" => $user]);
         $r = $stmt->fetch(PDO::FETCH_ASSOC);
         if ($r) {
-            $account_id = se($r, "id", -1, false);
+            $user_id = se($r, "points", -1, false);
         }
     } catch (PDOException $e) {
         flash(var_export($e->errorInfo, true), "danger");
     }
-    if (change_bills($bills, "admin", -1, $account_id, "Received $bills bills")) {
+    if (change_points($user, $bills, "admin said so")) {
         flash("Gave $bills bills to user id $user", "success");
     }
 }
