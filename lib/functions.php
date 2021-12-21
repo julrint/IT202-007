@@ -457,8 +457,10 @@ function calc_winners()
     } catch (PDOException $e) {
         error_log("Closing invalid comps error: " . var_export($e, true));
     }
+     elog("Done calc winners");
 }
-    //elog("Done calc winners");
+   
+
     function update_participants($comp_id)
 {
     $db = getDB();
