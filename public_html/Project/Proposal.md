@@ -183,7 +183,8 @@
      - PR link https://github.com/AwkwardJ/IT202-007/pull/36
     - Screenshots
      - ![image](https://user-images.githubusercontent.com/55968472/145742237-7b0761f3-e503-4fa3-b09c-5f4fb05596e4.png)
-        - Showing table that was made, called bills history to avoid errors in code. But this represents point history
+     - ![image](https://user-images.githubusercontent.com/55968472/147022496-16094b76-b73a-44a8-b9aa-2ca3a9556794.png)
+      - Showing table that was made called points_history. updated the table. now showing correct balance of points. 
 - [x] (12/12/2021) Competitions table should have the following columns (id, name, created, duration, expires (now + duration), current_reward, starting_reward, join_fee, current_participants, min_participants, paid_out (boolean), min_score, first_place_per, second_place_per, third_place_per, cost_to_create, created, modified)
     - Status: Complete (Completed, Partially working, Incomplete, Pending)
     - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
@@ -191,7 +192,7 @@
      - PR link https://github.com/AwkwardJ/IT202-007/pull/36
     - Screenshots
      - ![image](https://user-images.githubusercontent.com/55968472/145742458-cb3ca1d2-c6b5-4577-a6ce-32a0cff69d42.png)
-        - Showing table of competition, with the required colums
+      - Showing table of competition, with the required colums
  - [x] (12/12/2021) User will be able to create a competition
     - Status: Complete (Completed, Partially working, Incomplete, Pending)
     - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
@@ -205,19 +206,19 @@
     - Status: Incomplete (Completed, Partially working, Incomplete, Pending)
     - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
     - Pull Requests
-      - PR link https://github.com/AwkwardJ/IT202-007/pull/36
+     - PR link https://github.com/AwkwardJ/IT202-007/pull/36
     - Screenshots
-      - ![image](https://user-images.githubusercontent.com/55968472/145744414-031385ef-f3fc-4b54-90e2-0dd756c415bf.png)
-        - Tried messing with create competition but cant get it to increment when participants go up
+     - ![image](https://user-images.githubusercontent.com/55968472/145744414-031385ef-f3fc-4b54-90e2-0dd756c415bf.png)
+      - Have not completely tested the reward increasing, but the reward seems to have stayed the same since could not figure out how to make it go up when person joined.
 - [x] (12/12/2021) Have a page where the User can see active competitions (not expired)
   -  List of Evidence of Feature Completion
-    - Status: partially working (Completed, Partially working, Incomplete, Pending)
+    - Status: Completed (Completed, Partially working, Incomplete, Pending)
     - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
     - Pull Requests
-      - PR link https://github.com/AwkwardJ/IT202-007/pull/36
+     - PR link https://github.com/AwkwardJ/IT202-007/pull/36
     - Screenshots
-      - ![image](https://user-images.githubusercontent.com/55968472/146701414-a5e30856-d3be-4e2f-844a-b843352cd93c.png)
-        - Shows active competitions but, since I dont have enough points, you can only see that there is none made, still works though
+     - ![image](https://user-images.githubusercontent.com/55968472/147022391-3d2690c1-d9f7-4e53-bd6b-d5d3c6e8b326.png)
+      - This is a list of active competitions the user can. 
  - [x] (mm/dd/yyyy of completion) Will need an association table CompetitionParticipants (id, comp_id, user_id, created)
   -  List of Evidence of Feature Completion
     - Status: Completed (Completed, Partially working, Incomplete, Pending)
@@ -226,26 +227,26 @@
       - PR link https://github.com/AwkwardJ/IT202-007/pull/36
     - Screenshots
       - ![image](https://user-images.githubusercontent.com/55968472/145744749-a114e266-61f2-41e7-b8e3-bedad6a14e5d.png)
-        - Table is shown as BGD_userComs but it is the competition particpants table showing the need(id, comp_id, user_id, crated)
+      - Table is shown as BGD_UserComps but it is the competition particpants table showing the need(id, comp_id, user_id, crated)
 - [x] (12/19/2021) User can join active competitions
   -  Cant join yet because of a payement issue but does give option to join
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Status: Completed (Completed, Partially working, Incomplete, Pending)
     - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
     - Pull Requests
-      - PR link https://github.com/AwkwardJ/IT202-007/pull/36
+     - PR link https://github.com/AwkwardJ/IT202-007/pull/36
     - Screenshots
-      - ![image](https://user-images.githubusercontent.com/55968472/146701414-a5e30856-d3be-4e2f-844a-b843352cd93c.png)
-        - Screenshot #1 description explaining what you're trying to show
+     - ![image](https://user-images.githubusercontent.com/55968472/147022261-e99f64af-a53a-495a-a98e-65d033947b32.png)
+      - Shows that user has successfully joined a competition
 - [x] (12/12/2021) Create function that calculates competition winners
     - get all expired and not paid_out competitions
     - check tht particapnts count against the min required, get top 3 winners
-    - Status: complete (Completed, Partially working, Incomplete, Pending)
+    - Status: Completed (Completed, Partially working, Incomplete, Pending)
     - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
     - Pull Requests
-      - PR link https://github.com/AwkwardJ/IT202-007/pull/36
+     - PR link https://github.com/AwkwardJ/IT202-007/pull/36
     - Screenshots
-      - ![image](https://user-images.githubusercontent.com/55968472/145746501-f49ae9cd-23d7-4dd0-a619-c3b65ef5940b.png)
-        - Image of part of the function
+     - ![image](https://user-images.githubusercontent.com/55968472/145746501-f49ae9cd-23d7-4dd0-a619-c3b65ef5940b.png)
+      - Screenshot shows the function I used to calculate the winners, this can be controlled by the admin when they want to calc winners.
 
 - Milestone 4
  - [ ] (mm/dd/yyyy of completion) User can set their profile to be public or private (will need another column in Users table)
