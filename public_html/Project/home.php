@@ -12,6 +12,8 @@ require(__DIR__ . "/../../partials/nav.php");
     //shows session info
     //echo "<pre>" . var_export($_SESSION, true) . "</pre>";
     $duration = "week";
+    $duration2 = "month";
+    $duration3 = "lifetime";
     ?>
     <?php require(__DIR__ . "/../../partials/score_table.php"); ?>
 </div>
