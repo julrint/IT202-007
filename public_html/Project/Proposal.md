@@ -224,7 +224,7 @@
       - This is a list of active competitions the user can. 
      - ![image](https://user-images.githubusercontent.com/55968472/146701414-a5e30856-d3be-4e2f-844a-b843352cd93c.png)
       - Shows active competitions but, since I dont have enough points, you can only see that there is none made, still works though
- - [x] (mm/dd/yyyy of completion) Will need an association table CompetitionParticipants (id, comp_id, user_id, created)
+ - [x] (12/12/2021) Will need an association table CompetitionParticipants (id, comp_id, user_id, created)
   -  List of Evidence of Feature Completion
     - Status: Completed (Completed, Partially working, Incomplete, Pending)
     - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
