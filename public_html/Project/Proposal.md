@@ -295,14 +295,13 @@
  - [x] (12/21/2021) Add pagination to the Active Competitions view
   -  Show 10 competitions per page
   -  Paginate anything after 10
-  -  If no results, show the appropriate message
-    - Status: Complete (Completed, Partially working, Incomplete, Pending)
+    - Status: Partially Working (Completed, Partially working, Incomplete, Pending)
     - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
     - Pull Requests
       - https://github.com/AwkwardJ/IT202-007/pull/40
     - Screenshots
       - ![image](https://user-images.githubusercontent.com/55968472/147029360-bbc4b844-1bab-46ae-a6f0-1c864a248507.png)
-       - Pagination is visible at the bottom where the competitions are. 
+       - Pagination is visible at the bottom where the competitions are, shows 10 at most but did not make enough comps to test if you can go to page two
 - [x] (12/21/2021) Anywhere a username is displayed should be a link to that user’s profile
   -  This includes all scoreboards
   -  If the profile is private you can have the page just display “this profile is private” upon access
