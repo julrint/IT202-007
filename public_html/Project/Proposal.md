@@ -170,6 +170,7 @@
 - Milestone 3
   - [x] (12/12/2021) Users will have points associated with their account.
   -  Points show up on profile page on top right
+  -  as well as new users get value updated to 10 when they join as a register reward. 
     - Status: Complete (Completed, Partially working, Incomplete, Pending)
     - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
     - Pull Requests
@@ -195,6 +196,7 @@
       - Showing table of competition, with the required colums
  - [x] (12/12/2021) User will be able to create a competition
     - Status: Complete (Completed, Partially working, Incomplete, Pending)
+    - can set name, reward percentage, min score, min particpants, if they cant afford they are told you can not afford, otherwise they join comp automatically
     - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
     - Pull Requests
      - PR link https://github.com/AwkwardJ/IT202-007/pull/36
