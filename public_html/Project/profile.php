@@ -227,6 +227,7 @@ try {
         return isValid;
     }
 </script>
+<?php include(__DIR__ . "/../../partials/pagination.php"); ?>
 <?php
 require_once(__DIR__ . "/../../partials/footer.php");
 ?>
