@@ -49,6 +49,8 @@ if (isset($_POST["save"]) && $isMe && $edit) {
         }
     }
     //select fresh data from table
+    paginate("SELECT count(1) as total FROM BGD_Scores WHERE modefied > current_timestamp()");
+
     $stmt = $db->prepare("SELECT id, email, IFNULL(username, email) as `username` from Users where id = :id LIMIT 1");
     try {
         $stmt->execute([":id" => get_user_id()]);

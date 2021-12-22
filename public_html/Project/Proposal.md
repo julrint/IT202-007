@@ -170,6 +170,7 @@
 - Milestone 3
   - [x] (12/12/2021) Users will have points associated with their account.
   -  Points show up on profile page on top right
+  -  as well as new users get value updated to 10 when they join as a register reward. 
     - Status: Complete (Completed, Partially working, Incomplete, Pending)
     - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
     - Pull Requests
@@ -195,6 +196,7 @@
       - Showing table of competition, with the required colums
  - [x] (12/12/2021) User will be able to create a competition
     - Status: Complete (Completed, Partially working, Incomplete, Pending)
+    - can set name, reward percentage, min score, min particpants, if they cant afford they are told you can not afford, otherwise they join comp automatically
     - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
     - Pull Requests
      - PR link https://github.com/AwkwardJ/IT202-007/pull/36
@@ -269,88 +271,89 @@
       - ![image](https://user-images.githubusercontent.com/55968472/146997345-4738d0d6-41c3-42e2-86a4-1f223e845bf1.png)
        - First screenshot: Signed in to account jay looking at public profile of Jimboi, can see username and joined date but not email
        - Second screenshot: On Jay you can see the option to set profile to private or public
-- [] (12/21/2021) User will be able to see their competition history
+- [x] (12/21/2021) User will be able to see their competition history
   -  Limit to 10 results
   -  Paginate anything after 10
   -  If no results, show the appropriate message
-    - Status: Incomplete (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
+    - Status: Partially Working (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: https://jar236-prod.herokuapp.com/Project/competition_history.php
     - Pull Requests
      - https://github.com/AwkwardJ/IT202-007/pull/40
     - Screenshots
-     - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-      - Screenshot #1 description explaining what you're trying to show
-- [ ] (mm/dd/yyyy of completion) User with the role of “admin” can edit a competition where paid_out = false
+     - ![image](https://user-images.githubusercontent.com/55968472/147027858-8e6e5080-38ba-44bc-be97-a5fc7a3fee12.png)
+      - Showing the competition history, unfortunately could not show reward correctly and still shows able to join even though they are aleardy in
+- [x] (12/21/2021) User with the role of “admin” can edit a competition where paid_out = false
   -  They can adjust any of the regular form values
   -  If the competition was expired they can update the duration to include extra time
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Status: Incomplete (Completed, Partially working, Incomplete, Pending)
     - Direct Link:https://jar236-prod.herokuapp.com/Project/login.php
     - Pull Requests
      - https://github.com/AwkwardJ/IT202-007/pull/40
     - Screenshots
-     - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-      - Screenshot #1 description explaining what you're trying to show
- - [ ] (mm/dd/yyyy of completion) Add pagination to the Active Competitions view
+     - ![image](https://user-images.githubusercontent.com/55968472/147028137-9b2b6f05-0b0a-48eb-a630-8ba58d347f85.png)
+      - Added another payout option to show no payout, in other words everyone gets 0, but ultimately could not get a way for admin to update duration or adjust values
+ - [x] (12/21/2021) Add pagination to the Active Competitions view
   -  Show 10 competitions per page
   -  Paginate anything after 10
   -  If no results, show the appropriate message
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Status: Complete (Completed, Partially working, Incomplete, Pending)
     - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
     - Pull Requests
       - https://github.com/AwkwardJ/IT202-007/pull/40
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-       - Screenshot #1 description explaining what you're trying to show
-- [ ] (mm/dd/yyyy of completion) Anywhere a username is displayed should be a link to that user’s profile
+      - ![image](https://user-images.githubusercontent.com/55968472/147029360-bbc4b844-1bab-46ae-a6f0-1c864a248507.png)
+       - Pagination is visible at the bottom where the competitions are. 
+- [x] (12/21/2021) Anywhere a username is displayed should be a link to that user’s profile
   -  This includes all scoreboards
   -  If the profile is private you can have the page just display “this profile is private” upon access
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Status: Completed (Completed, Partially working, Incomplete, Pending)
     - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
     - Pull Requests
      - https://github.com/AwkwardJ/IT202-007/pull/40
     - Screenshots
-     - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-      - Screenshot #1 description explaining what you're trying to show
-- [ ] (mm/dd/yyyy of completion) Viewing an active or expired competition should show the top 10 scoreboard related to that competition
+     - ![image](https://user-images.githubusercontent.com/55968472/147029950-b462fb96-c485-4012-90a8-98d9c421dae3.png)
+     - ![image](https://user-images.githubusercontent.com/55968472/147029995-1f19a6dc-7e45-4147-9ed8-36c88a2fa3c4.png)
+      - Screenshot one shows private profile if click, screenshot two is a public profile, both were linked on scoreboard
+- [x] (mm/dd/yyyy of completion) Viewing an active or expired competition should show the top 10 scoreboard related to that competition
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Status: Completed (Completed, Partially working, Incomplete, Pending)
     - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
     - Pull Requests
      - https://github.com/AwkwardJ/IT202-007/pull/40
     - Screenshots
-     - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-      - Screenshot #1 description explaining what you're trying to show
- - [ ] (mm/dd/yyyy of completion) Game should be fully implemented/complete by this point
+     - ![image](https://user-images.githubusercontent.com/55968472/147030721-4c25fcce-084a-4aeb-bf68-bcf39ac4bd73.png)
+      - Since I only took the first attempt after joining the competition in only shows the first scores, plus there were only three able to join for this example
+ - [x] (12/21/2021) Game should be fully implemented/complete by this point
   -  Game should tell the player if they’re not logged in that their score will not be recorded.
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Status: Completed (Completed, Partially working, Incomplete, Pending)
     - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
     - Pull Requests
       - https://github.com/AwkwardJ/IT202-007/pull/40
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-       - Screenshot #1 description explaining what you're trying to show
-- [ ] (mm/dd/yyyy of completion) User’s score history will include pagination
+      - ![image](https://user-images.githubusercontent.com/55968472/147030884-dda434a1-934a-4f14-8e16-f0fb95327ba8.png)
+       - After a player who is not logged in plays then goes out of the game they are given this message
+- [x] (12/21/2021) User’s score history will include pagination
   -  Show latest 10
   -  Paginate after 10
   -  Show appropriate message for no results
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Status: Partially Working (Completed, Partially working, Incomplete, Pending)
     - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
     - Pull Requests
      - https://github.com/AwkwardJ/IT202-007/pull/40
     - Screenshots
-     - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-      - Screenshot #1 description explaining what you're trying to show
-- [ ] (mm/dd/yyyy of completion) Home page will have a weekly, monthly, and lifetime scoreboard
+     - ![image](https://user-images.githubusercontent.com/55968472/147031967-6194f542-1e54-44a7-a093-709c2233f2ea.png)
+      - Shows the top 10 scores but could not get pagination to work for the profile scores
+- [x] (12/21/2021) Home page will have a weekly, monthly, and lifetime scoreboard
   -  Will also have a link to the game
   -  Scoreboards will show username and points for the session
     -  (See requirement about username linking to profile)
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Status: Partially Working (Completed, Partially working, Incomplete, Pending)
     - Direct Link: https://jar236-prod.herokuapp.com/Project/login.php
     - Pull Requests
      - https://github.com/AwkwardJ/IT202-007/pull/40
     - Screenshots
-     - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-      - Screenshot #1 description explaining what you're trying to show
+     - ![image](https://user-images.githubusercontent.com/55968472/147032459-05c1bddf-7b18-4608-bce4-8926160b9027.png)
+      - Shows the weekly scores, not sure if the other montly, and lifetime are not popping up since I just did games this week, but I do have duration for monthly and lifetime but they are not showing. In addition, the game is linked at the top where it says play.
 ### Intructions
 #### Don't delete this
 1. Pick one project type
